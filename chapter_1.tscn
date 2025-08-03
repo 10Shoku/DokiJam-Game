@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://ddn6h4yamqq5"]
+[gd_scene load_steps=5 format=3 uid="uid://ddn6h4yamqq5"]
+
+[ext_resource type="PackedScene" uid="uid://b662dwo54wc5p" path="res://progresion_npc.tscn" id="1_8o7lh"]
+[ext_resource type="PackedScene" uid="uid://2w4cuta4hxcx" path="res://player.tscn" id="2_345w4"]
+[ext_resource type="Texture2D" uid="uid://cxmhuwyxyearb" path="res://icon.svg" id="3_7doo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6s8g"]
+size = Vector2(128, 128)
 
 [node name="Chapter 1" type="Node2D"]
+
+[node name="Progresion NPC" parent="." instance=ExtResource("1_8o7lh")]
+
+[node name="Player" parent="." instance=ExtResource("2_345w4")]
+position = Vector2(544, 533)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_bottom = 675
+
+[node name="ground" type="StaticBody2D" parent="."]
+position = Vector2(573.695, 648)
+scale = Vector2(9.455, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ground"]
+position = Vector2(0.0322571, 6.10352e-05)
+scale = Vector2(1, 1)
+texture = ExtResource("3_7doo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
+position = Vector2(0.0322571, 6.10352e-05)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_l6s8g")
