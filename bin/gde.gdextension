@@ -1,0 +1,9 @@
+[configuration]
+
+entry_symbol = "DokiGDE_library_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+macos.debug = "res://bin/libDokiGDE.dylib"
+linux.debug = "res://bin/libDokiGDE.so"
+windows.debug = "res://bin/libDokiGDE.dll"
