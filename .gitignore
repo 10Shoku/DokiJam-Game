@@ -1,0 +1,14 @@
+# Godot junk
+.import/
+.export/
+.export_cfg/
+.godot/
+*.import
+*.tmp
+*.log
+*.cfg
+*.mono/
+
+# OS junk
+.DS_Store
+Thumbs.db
