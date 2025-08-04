@@ -12,4 +12,7 @@
 #else
 #define GDE_EXPORT
 #endif
+
+#include "gdextension_interface.h"
+
 #endif // ! GDE_EXPORT
