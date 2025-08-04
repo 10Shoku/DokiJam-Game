@@ -1,6 +1,6 @@
 [configuration]
 
-entry_symbol = "DokiGDE_library_init"
+entry_symbol = "DokiGDE_main"
 compatibility_minimum = "4.3"
 
 [libraries]
