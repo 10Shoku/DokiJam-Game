@@ -38,13 +38,13 @@ text = "Start"
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 button_mask = 7
-text = "options"
+text = "Options"
 
 [node name="quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 button_mask = 7
-text = "quit"
+text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

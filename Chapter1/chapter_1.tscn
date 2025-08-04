@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b662dwo54wc5p" path="res://Chapter1/progresion_npc.tscn" id="1_8khua"]
 [ext_resource type="PackedScene" uid="uid://2w4cuta4hxcx" path="res://Chapter1/player.tscn" id="2_vpf83"]
-[ext_resource type="Texture2D" uid="uid://cxmhuwyxyearb" path="res://icon.svg" id="3_cxeb6"]
+[ext_resource type="Texture2D" uid="uid://d1k58efbjiwdr" path="res://icon.svg" id="3_cxeb6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6s8g"]
 size = Vector2(128, 128)
