@@ -15,11 +15,14 @@ void DokiGDE_init(void* userdata, GDExtensionInitializationLevel p_level) {
         // Register classes/nodes here
 
         // Get the function pointer for class_db_register_extension_class
-        ctx->class_db_register_extension_class = (GDExtensionInterfaceClassdbRegisterExtensionClass)ctx->get_proc_address("class_db_register_extension_class");
+        ctx->class_db_register_extension_class = (GDExtensionInterfaceClassdbRegisterExtensionClass4)ctx->get_proc_address("classdb_register_extension_class4");
 
         // Get the virtual function name strings
+        ctx->_ready_name = ctx->mem_alloc(sizeof(StringName));
         ctx->string_name_new_with_utf8_chars(ctx->_ready_name, "_ready");
+        ctx->_process_name = ctx->mem_alloc(sizeof(StringName));
         ctx->string_name_new_with_utf8_chars(ctx->_process_name, "_process");
+        //ctx->_..._name = ctx->mem_alloc(sizeof(StringName));
         //ctx->string_name_new_with_utf8_chars(ctx->_..._name, "_...");
         //...
 
@@ -59,7 +62,9 @@ GDExtensionBool GDE_EXPORT DokiGDE_main(
 
     ctx->get_proc_address = p_get_proc_address;
     ctx->class_library = p_library;
-    ctx->string_name_new_with_utf8_chars = (GDExtensionInterfaceStringNameNewWithUtf8Chars)ctx->get_proc_address("godot_string_name_new_with_utf8_chars");
+    ctx->string_name_new_with_utf8_chars = (GDExtensionInterfaceStringNameNewWithUtf8Chars)ctx->get_proc_address("string_name_new_with_utf8_chars");
+    ctx->mem_alloc = (GDExtensionInterfaceMemAlloc)ctx->get_proc_address("mem_alloc");
+    ctx->mem_free = (GDExtensionInterfaceMemFree)ctx->get_proc_address("mem_free");
 
     // Set up the initialization functions and levels
     r_initialization->deinitialize = DokiGDE_deinit;

@@ -4,7 +4,7 @@
 
 GDExtensionObjectPtr Node1_create(void* p_class_userdata, GDExtensionBool p_notify_postinitialize) {
     DokiGDE_Context* ctx = (DokiGDE_Context*)p_class_userdata; //get context from userdata
-    return;
+    return NULL;
 }
 
 void Node1_free(void* p_class_userdata, GDExtensionClassInstancePtr p_instance) {
