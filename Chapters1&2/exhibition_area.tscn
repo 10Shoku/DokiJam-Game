@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://1ytrj0ju000l"]
+
+[ext_resource type="Texture2D" uid="uid://dmnof4wemoehp" path="res://Chapters1&2/Assets/museum_floor.jpg" id="1_5pjr8"]
+[ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/player.tscn" id="2_dfv45"]
+[ext_resource type="Texture2D" uid="uid://bln8ni056pv6u" path="res://Chapters1&2/Assets/door.jpeg" id="2_strwm"]
+[ext_resource type="PackedScene" uid="uid://d3ntet80ndr7y" path="res://Chapters1&2/Scenes/dialog_area.tscn" id="3_dfv45"]
+[ext_resource type="Texture2D" uid="uid://dtorho3dqrpk1" path="res://Chapters1&2/Assets/pictures.jpeg" id="3_oo5c1"]
+[ext_resource type="PackedScene" uid="uid://b0avvf7852l5k" path="res://Chapters1&2/UI/dialog_player.tscn" id="4_gffc0"]
+[ext_resource type="Texture2D" uid="uid://dniqm55qq8k8s" path="res://Chapters1&2/Assets/bookcase.jpg" id="4_lwwdm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
+size = Vector2(3196, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfv45"]
+size = Vector2(121, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gffc0"]
+size = Vector2(141, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y678"]
+size = Vector2(225, 200)
+
+[node name="Exhibition Area" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(616, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 616.0
+offset_bottom = 689.0
+texture = ExtResource("1_5pjr8")
+
+[node name="door" type="TextureRect" parent="."]
+offset_left = 268.0
+offset_top = 523.0
+offset_right = 493.0
+offset_bottom = 748.0
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("2_strwm")
+
+[node name="pictures" type="TextureRect" parent="."]
+offset_left = 881.0
+offset_top = 522.0
+offset_right = 1085.0
+offset_bottom = 769.0
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("3_oo5c1")
+
+[node name="bookcase" type="TextureRect" parent="."]
+offset_left = 1270.0
+offset_top = 438.0
+offset_right = 2806.0
+offset_bottom = 1974.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("4_lwwdm")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(1427, 656.5)
+shape = SubResource("RectangleShape2D_ds5ad")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -170.0
+offset_top = 638.0
+offset_right = 3025.0
+offset_bottom = 854.0
+
+[node name="Player" parent="." instance=ExtResource("2_dfv45")]
+
+[node name="DialogAreaDoor" parent="." instance=ExtResource("3_dfv45")]
+position = Vector2(94, 584)
+dialog_key = "door"
+
+[node name="CollisionShape2D" parent="DialogAreaDoor" index="0"]
+position = Vector2(232.5, -5.5)
+shape = SubResource("RectangleShape2D_dfv45")
+
+[node name="DialogAreaPictures" parent="." instance=ExtResource("3_dfv45")]
+position = Vector2(924, 554)
+dialog_key = "pictures"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogAreaPictures"]
+position = Vector2(5.5, 17.5)
+shape = SubResource("RectangleShape2D_gffc0")
+
+[node name="DialogAreaBookcase" parent="." instance=ExtResource("3_dfv45")]
+dialog_key = "bookcase"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogAreaBookcase"]
+position = Vector2(1368.5, 538)
+shape = SubResource("RectangleShape2D_3y678")
+
+[node name="DialogPlayer" parent="." instance=ExtResource("4_gffc0")]
+scene_text_file = "res://Chapters1&2/json/dialogues.json"
+
+[editable path="DialogAreaDoor"]
