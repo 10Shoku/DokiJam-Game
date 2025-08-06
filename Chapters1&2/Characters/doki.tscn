@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhkalyr3d7nx0"]
 
-[ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/player.gd" id="1_an45n"]
+[ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/doki.gd" id="1_an45n"]
 [ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_t7xgc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
@@ -20,7 +20,7 @@ size = Vector2(24, 62)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7xgc"]
 size = Vector2(24, 62)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Doki" type="CharacterBody2D"]
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -39,4 +39,4 @@ shape = SubResource("RectangleShape2D_t7xgc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -56)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)

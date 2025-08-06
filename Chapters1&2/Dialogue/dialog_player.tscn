@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0avvf7852l5k"]
 
-[ext_resource type="Script" uid="uid://brjaefq16avk6" path="res://Chapters1&2/UI/dialog_player.gd" id="1_akcmc"]
+[ext_resource type="Script" uid="uid://brjaefq16avk6" path="res://Chapters1&2/Dialogue/dialog_player.gd" id="1_akcmc"]
 [ext_resource type="Texture2D" uid="uid://d1k58efbjiwdr" path="res://icon.svg" id="2_biglp"]
 
 [node name="DialogPlayer" type="CanvasLayer"]
@@ -21,16 +21,33 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_biglp")
 
-[node name="TextLabel" type="Label" parent="."]
+[node name="Components" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextLabel" type="Label" parent="Components"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.5
-offset_top = -50.5
-offset_right = 117.5
-offset_bottom = 50.5
+offset_left = 502.5
+offset_top = 289.5
+offset_right = 737.5
+offset_bottom = 390.5
 grow_horizontal = 2
 grow_vertical = 2
 autowrap_mode = 2
+
+[node name="NameLabel" type="RichTextLabel" parent="Components"]
+offset_left = 504.0
+offset_top = 258.0
+offset_right = 640.0
+offset_bottom = 298.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Components"]
+position = Vector2(766, 267)
+texture = ExtResource("2_biglp")
