@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhkalyr3d7nx0"]
+[gd_scene load_steps=7 format=3 uid="uid://dhkalyr3d7nx0"]
 
 [ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/doki.gd" id="1_an45n"]
 [ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_t7xgc"]
+[ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Chapters1&2/Scripts/camera.gd" id="3_8bcrg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
 animations = [{
@@ -38,5 +39,7 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_t7xgc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 3
 position = Vector2(0, -56)
 zoom = Vector2(1.5, 1.5)
+script = ExtResource("3_8bcrg")

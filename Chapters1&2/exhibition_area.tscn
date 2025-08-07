@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://byqb73q2cpgi7" path="res://Chapters1&2/Characters/dragoon.tscn" id="8_oo5c1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
-size = Vector2(3196, 37)
+size = Vector2(5284, 37)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dfv45"]
 size = Vector2(121, 115)
@@ -64,9 +64,9 @@ position = Vector2(1427, 656.5)
 shape = SubResource("RectangleShape2D_ds5ad")
 
 [node name="ColorRect" type="ColorRect" parent="Ground"]
-offset_left = -170.0
+offset_left = -1212.0
 offset_top = 638.0
-offset_right = 3025.0
+offset_right = 4067.0
 offset_bottom = 854.0
 color = Color(0.125911, 0.125911, 0.125911, 1)
 

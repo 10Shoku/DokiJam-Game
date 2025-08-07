@@ -6,8 +6,6 @@ var dialogue_text := {}
 var selected_text := []
 var in_progress = false
 
-@onready var camera: Camera2D = $Background
-
 @onready var not_doki_name_label: RichTextLabel = $"Not Doki/Panel/NotDokiNameLabel"
 @onready var doki_sprite: TextureRect = $"Doki/Doki Sprite"
 @onready var not_doki_sprite: TextureRect = $"Not Doki/Not Doki Sprite"
@@ -15,7 +13,6 @@ var in_progress = false
 
 
 func _ready() -> void:
-	camera.enabled = false
 	visible = false
 	dialogue_text = load_dialogue_text()
 	SignalBus.display_dialog.connect(on_display_dialog)
@@ -62,9 +59,8 @@ func next_line():
 func finish():
 	dialogue_label.text = ""
 	
-	camera.enabled = false
+	SignalBus.dialogue_end.emit()
 	visible = false
-	
 	in_progress = false
 	get_tree().paused = false
 
@@ -72,14 +68,12 @@ func finish():
 func on_display_dialog(dialogue_key):
 	doki_sprite["modulate"] = Color(0x7a7a7aff)
 	not_doki_sprite["modulate"] = Color(0x7a7a7aff)
-	print("modulate reset")
 	
 	if in_progress:
 		next_line()
 	
 	else:
 		get_tree().paused = true
-		camera.enabled = true
 		
 		visible = true
 		in_progress = true
@@ -93,9 +87,7 @@ func on_display_dialog(dialogue_key):
 
 func doki_turn():
 	doki_sprite["modulate"] = Color(1, 1, 1, 1)
-	print("doki highlight")
 
 
 func not_doki_turn():
 	not_doki_sprite["modulate"] = Color(1, 1, 1, 1)
-	print("not doki highlight")
