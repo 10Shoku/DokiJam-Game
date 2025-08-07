@@ -9,7 +9,8 @@ var in_progress = false
 @onready var camera: Camera2D = $Background
 
 @onready var not_doki_name_label: RichTextLabel = $"Not Doki/Panel/NotDokiNameLabel"
-@onready var not_doki_sprite: Sprite2D = $"Not Doki/Not Doki Sprite"
+@onready var doki_sprite: TextureRect = $"Doki/Doki Sprite"
+@onready var not_doki_sprite: TextureRect = $"Not Doki/Not Doki Sprite"
 @onready var dialogue_label: Label = $"Dialogue Box/Dialogue Frame/Dialogue Text"
 
 
@@ -41,7 +42,14 @@ func load_dialogue_text() -> Dictionary:
 
 
 func show_text():
-	dialogue_label.text = selected_text.pop_front()
+	var text_to_show : String = selected_text.pop_front()
+	
+	if text_to_show.begins_with("Doki"):
+		doki_turn()
+	else:
+		not_doki_turn()
+	
+	dialogue_label.text = text_to_show
 
 
 func next_line():
@@ -53,21 +61,41 @@ func next_line():
 
 func finish():
 	dialogue_label.text = ""
+	
 	camera.enabled = false
 	visible = false
+	
 	in_progress = false
 	get_tree().paused = false
 
 
 func on_display_dialog(dialogue_key):
+	doki_sprite["modulate"] = Color(0x7a7a7aff)
+	not_doki_sprite["modulate"] = Color(0x7a7a7aff)
+	print("modulate reset")
+	
 	if in_progress:
 		next_line()
+	
 	else:
 		get_tree().paused = true
 		camera.enabled = true
+		
 		visible = true
 		in_progress = true
+		
 		not_doki_name_label.text = dialogue_text[dialogue_key]["name"]
 		not_doki_sprite.texture = load(dialogue_text[dialogue_key]["sprite_path"])
 		selected_text = dialogue_text[dialogue_key]["lines"].duplicate()
+		
 		show_text()
+
+
+func doki_turn():
+	doki_sprite["modulate"] = Color(1, 1, 1, 1)
+	print("doki highlight")
+
+
+func not_doki_turn():
+	not_doki_sprite["modulate"] = Color(1, 1, 1, 1)
+	print("not doki highlight")

@@ -1,40 +1,44 @@
 {
 	"door": {
 		"name": "Door",
-		"sprite_path": "",
+		"sprite_path": "res://Chapters1&2/Assets/door.jpeg",
 		"lines": [
-			"The door is locked.",
-			"Thus, no leave"
+			"Doki: The door is locked.",
+			"Doki: Thus, no leave",
+			"Door: ..."
 		]
 	},
 	"pictures": {
 		"name": "Pictures",
-		"sprite_path": "",
+		"sprite_path": "res://Chapters1&2/Assets/pictures.jpeg",
 		"lines": [
-			"Dog",
-			"Objection, it's dawg"
+			"Doki: Dog",
+			"Doki: Objection, it's dawg",
+			"Pictures: ...??"
 		]
 	},
 	"bookcase": {
 		"name": "Bookcase",
-		"sprite_path": "",
+		"sprite_path": "res://Chapters1&2/Assets/bookcase.jpg",
 		"lines": [
-			"Books be here. Okay"
+			"Doki: Books be here. Okay"
 		]
 	},
 	"dragoon": {
 		"name": "Dragoon",
-		"sprite_path": "res://icon.svg",
+		"sprite_path": "res://Chapters1&2/Assets/Dragoon.png",
 		"lines": [
-			"I am a Dragoon. mhm. frfr",
-			"Doki is my goddess. mhm. frfr"
+			"Dragoon: I am a Dragoon. mhm. frfr",
+			"Dragoon: Doki is my goddess. mhm. frfr",
+			"Doki: ...real shit"
 		],
 	},
 	"character": {
 		"name": "",
 		"sprite_path": "",
 		"lines": [
-			
+			"",
+			"Doki: "
 		]
 	},
 }
