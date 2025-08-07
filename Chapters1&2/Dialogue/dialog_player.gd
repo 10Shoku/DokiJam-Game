@@ -2,14 +2,15 @@ extends CanvasLayer
 
 @export_file("*.json") var dialogue_file: String
 
-var dialogue_text := {}
-var selected_text := []
-var in_progress = false
-
-@onready var not_doki_name_label: RichTextLabel = $"Not Doki/Panel/NotDokiNameLabel"
+@onready var not_doki_name_label: RichTextLabel = $"Not Doki/Not Doki Sprite/Panel/NotDokiNameLabel"
 @onready var doki_sprite: TextureRect = $"Doki/Doki Sprite"
 @onready var not_doki_sprite: TextureRect = $"Not Doki/Not Doki Sprite"
 @onready var dialogue_label: Label = $"Dialogue Box/Dialogue Frame/Dialogue Text"
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+var dialogue_text := {}
+var selected_text := []
+var in_progress = false
 
 
 func _ready() -> void:
@@ -59,6 +60,9 @@ func next_line():
 func finish():
 	dialogue_label.text = ""
 	
+	animation_player.play("dialogue_end")
+	await animation_player.animation_finished
+	
 	SignalBus.dialogue_end.emit()
 	visible = false
 	in_progress = false
@@ -76,6 +80,8 @@ func on_display_dialog(dialogue_key):
 		get_tree().paused = true
 		
 		visible = true
+		animation_player.play("dialogue_start")
+		await animation_player.animation_finished
 		in_progress = true
 		
 		not_doki_name_label.text = dialogue_text[dialogue_key]["name"]
