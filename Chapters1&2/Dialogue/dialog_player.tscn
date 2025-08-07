@@ -1,53 +1,104 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0avvf7852l5k"]
+[gd_scene load_steps=4 format=3 uid="uid://b0avvf7852l5k"]
 
 [ext_resource type="Script" uid="uid://brjaefq16avk6" path="res://Chapters1&2/Dialogue/dialog_player.gd" id="1_akcmc"]
 [ext_resource type="Texture2D" uid="uid://d1k58efbjiwdr" path="res://icon.svg" id="2_biglp"]
+[ext_resource type="Texture2D" uid="uid://cxrnaoyfu7kw5" path="res://Chapters1&2/Assets/Doki Dialouge.png" id="2_gccds"]
 
 [node name="DialogPlayer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_akcmc")
 
-[node name="Background" type="TextureRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -133.0
-offset_top = -64.0
-offset_right = 133.0
-offset_bottom = 64.0
+[node name="Background" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+enabled = false
+
+[node name="Doki" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 337.0
+offset_right = 202.0
+offset_bottom = 720.0
+
+[node name="Doki Sprite" type="Sprite2D" parent="Doki"]
+position = Vector2(130, 224)
+texture = ExtResource("2_gccds")
+
+[node name="Panel" type="Panel" parent="Doki"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 219.0
+offset_right = 190.0
+offset_bottom = 259.0
+
+[node name="DokiNameLabel" type="RichTextLabel" parent="Doki/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Doki"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Not Doki" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1008.0
+offset_top = 347.0
+offset_right = 1215.0
+offset_bottom = 727.0
+
+[node name="Not Doki Sprite" type="Sprite2D" parent="Not Doki"]
+position = Vector2(102, 222)
+scale = Vector2(1.84375, 4.44531)
+texture = ExtResource("2_biglp")
+
+[node name="Panel" type="Panel" parent="Not Doki"]
+offset_left = 40.0
+offset_top = 205.0
+offset_right = 165.0
+offset_bottom = 245.0
+
+[node name="NotDokiNameLabel" type="RichTextLabel" parent="Not Doki/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialogue Box" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -109.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Dialogue Frame" type="TextureRect" parent="Dialogue Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_biglp")
 
-[node name="Components" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextLabel" type="Label" parent="Components"]
+[node name="Dialogue Text" type="Label" parent="Dialogue Box/Dialogue Frame"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 502.5
-offset_top = 289.5
-offset_right = 737.5
-offset_bottom = 390.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 51.0
+offset_top = 12.0
+offset_right = -51.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 autowrap_mode = 2
-
-[node name="NameLabel" type="RichTextLabel" parent="Components"]
-offset_left = 504.0
-offset_top = 258.0
-offset_right = 640.0
-offset_bottom = 298.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Components"]
-position = Vector2(766, 267)
-texture = ExtResource("2_biglp")

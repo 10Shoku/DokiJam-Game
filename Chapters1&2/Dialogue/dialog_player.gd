@@ -6,13 +6,15 @@ var dialogue_text := {}
 var selected_text := []
 var in_progress = false
 
-@onready var background: TextureRect = $Background
-@onready var text_label: Label = $Components/TextLabel
-@onready var name_label: RichTextLabel = $Components/NameLabel
-@onready var sprite: Sprite2D = $Components/Sprite2D
+@onready var camera: Camera2D = $Background
+
+@onready var not_doki_name_label: RichTextLabel = $"Not Doki/Panel/NotDokiNameLabel"
+@onready var not_doki_sprite: Sprite2D = $"Not Doki/Not Doki Sprite"
+@onready var dialogue_label: Label = $"Dialogue Box/Dialogue Frame/Dialogue Text"
 
 
 func _ready() -> void:
+	camera.enabled = false
 	visible = false
 	dialogue_text = load_dialogue_text()
 	SignalBus.display_dialog.connect(on_display_dialog)
@@ -39,7 +41,7 @@ func load_dialogue_text() -> Dictionary:
 
 
 func show_text():
-	text_label.text = selected_text.pop_front()
+	dialogue_label.text = selected_text.pop_front()
 
 
 func next_line():
@@ -50,7 +52,8 @@ func next_line():
 
 
 func finish():
-	text_label.text = ""
+	dialogue_label.text = ""
+	camera.enabled = false
 	visible = false
 	in_progress = false
 	get_tree().paused = false
@@ -61,9 +64,10 @@ func on_display_dialog(dialogue_key):
 		next_line()
 	else:
 		get_tree().paused = true
+		camera.enabled = true
 		visible = true
 		in_progress = true
-		name_label.text = dialogue_text[dialogue_key]["name"]
-		sprite.texture = load(dialogue_text[dialogue_key]["sprite_path"])
+		not_doki_name_label.text = dialogue_text[dialogue_key]["name"]
+		not_doki_sprite.texture = load(dialogue_text[dialogue_key]["sprite_path"])
 		selected_text = dialogue_text[dialogue_key]["lines"].duplicate()
 		show_text()
