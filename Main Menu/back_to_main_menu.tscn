@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbjy7kwfiae17"]
+
+[ext_resource type="Script" uid="uid://dalido3vw5d1t" path="res://Main Menu/back_to_main_menu.gd" id="1_7bp4t"]
+
+[node name="BackToMainMenu" type="Button"]
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("1_7bp4t")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

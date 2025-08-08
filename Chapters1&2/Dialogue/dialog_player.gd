@@ -80,12 +80,12 @@ func on_display_dialog(dialogue_key):
 		get_tree().paused = true
 		
 		visible = true
+		not_doki_sprite.texture = load(dialogue_text[dialogue_key]["sprite_path"])
 		animation_player.play("dialogue_start")
 		await animation_player.animation_finished
 		in_progress = true
 		
 		not_doki_name_label.text = dialogue_text[dialogue_key]["name"]
-		not_doki_sprite.texture = load(dialogue_text[dialogue_key]["sprite_path"])
 		selected_text = dialogue_text[dialogue_key]["lines"].duplicate()
 		
 		show_text()
