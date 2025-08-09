@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c24g6shbppags"]
 
 [ext_resource type="Script" uid="uid://d2q2sit6wsb1t" path="res://Main Menu/main_menu.gd" id="1_8ketd"]
-[ext_resource type="Texture2D" uid="uid://d24jgllce4agl" path="res://Main Menu/Assets/GameIcon.png" id="2_8ketd"]
+[ext_resource type="Texture2D" uid="uid://befnmu8f5mucg" path="res://Main Menu/Assets/GameIcon.png" id="2_8ketd"]
 
 [sub_resource type="Gradient" id="Gradient_nb5b5"]
 
