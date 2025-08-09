@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
-@export var SPEED = 500.0
-const JUMP_VELOCITY = -400.0
+@onready var camera: Camera2D = $Camera2D
+
+@export var speed := 500.0
+@export var jump_velocity := -400.0
 
 
 func _physics_process(delta: float) -> void:
@@ -9,13 +11,15 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
-		velocity.x = direction * SPEED
+		camera.look_ahead(direction)
+		velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		camera.look_normal()
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
- 
+	
