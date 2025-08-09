@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dn75qfhxdmgv0"]
+
+[node name="Chapter3" type="Node"]
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Items" type="ItemList" parent="."]
+anchors_preset = -1
+offset_left = 262.0
+offset_top = 341.0
+offset_right = 719.0
+offset_bottom = 555.0
+item_count = 2
+item_0/text = "item1"
+item_1/text = "item2"
+
+[node name="HP" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="1" type="ColorRect" parent="HP"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="2" type="ColorRect" parent="HP"]
+layout_mode = 0
+offset_left = 43.0
+offset_right = 83.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="3" type="ColorRect" parent="HP"]
+layout_mode = 0
+offset_left = 86.0
+offset_right = 126.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="4" type="ColorRect" parent="HP"]
+layout_mode = 0
+offset_left = 129.0
+offset_right = 169.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
+
+[node name="5" type="ColorRect" parent="HP"]
+layout_mode = 0
+offset_left = 172.0
+offset_right = 212.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)

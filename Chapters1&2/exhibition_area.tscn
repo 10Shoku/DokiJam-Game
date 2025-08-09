@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://1ytrj0ju000l"]
 
-[ext_resource type="Texture2D" uid="uid://dmnof4wemoehp" path="res://Chapters1&2/Assets/museum_floor.jpg" id="1_5pjr8"]
+[ext_resource type="Texture2D" uid="uid://cp1moimqoorut" path="res://Chapters1&2/Assets/museum_floor.jpg" id="1_5pjr8"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/player.tscn" id="2_dfv45"]
-[ext_resource type="Texture2D" uid="uid://bln8ni056pv6u" path="res://Chapters1&2/Assets/door.jpeg" id="2_strwm"]
+[ext_resource type="Texture2D" uid="uid://bn8nmb580ex1u" path="res://Chapters1&2/Assets/door.jpeg" id="2_strwm"]
 [ext_resource type="PackedScene" uid="uid://d3ntet80ndr7y" path="res://Chapters1&2/Scenes/dialog_area.tscn" id="3_dfv45"]
-[ext_resource type="Texture2D" uid="uid://dtorho3dqrpk1" path="res://Chapters1&2/Assets/pictures.jpeg" id="3_oo5c1"]
+[ext_resource type="Texture2D" uid="uid://8jqdsxy66avc" path="res://Chapters1&2/Assets/pictures.jpeg" id="3_oo5c1"]
 [ext_resource type="PackedScene" uid="uid://b0avvf7852l5k" path="res://Chapters1&2/UI/dialog_player.tscn" id="4_gffc0"]
-[ext_resource type="Texture2D" uid="uid://dniqm55qq8k8s" path="res://Chapters1&2/Assets/bookcase.jpg" id="4_lwwdm"]
+[ext_resource type="Texture2D" uid="uid://cgpx7acfl7b53" path="res://Chapters1&2/Assets/bookcase.jpg" id="4_lwwdm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
 size = Vector2(3196, 37)
