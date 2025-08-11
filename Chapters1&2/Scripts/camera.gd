@@ -14,27 +14,32 @@ var looking_up := false
 var looking_down := false
 var looking_direction := 0
 
+var starting_offset : Vector2
+
 
 func _ready() -> void:
+	make_current()
+	starting_offset = offset
+	
 	SignalBus.display_dialog.connect(on_display_dialog)
 	SignalBus.dialogue_end.connect(on_dialogue_end)
 
 
 func _process(delta: float) -> void:
-	var target_zoom = zoom_in if dialogue_in_progress else zoom_out
-	zoom = zoom.lerp(target_zoom, delta * zoom_speed)
+	#var target_zoom = zoom_in if dialogue_in_progress else zoom_out
+	#zoom = zoom.lerp(target_zoom, delta * zoom_speed)
 	
 	if looking_direction != 0:
 		offset.x = lerpf(offset.x, looking_direction * 100, camera_speed * delta)
 	else:
-		offset.x = lerpf(offset.x, 0, camera_speed * delta)
+		offset.x = lerpf(offset.x, starting_offset.x, camera_speed * delta)
 	
 	if looking_up:
-		offset.y = lerpf(offset.y, -150.0, camera_speed * delta)
+		offset.y = lerpf(offset.y, starting_offset.y - 150.0, camera_speed * delta)
 	elif looking_down:
-		offset.y = lerpf(offset.y, 150.0, camera_speed * delta)
+		offset.y = lerpf(offset.y, starting_offset.x + 150.0, camera_speed * delta)
 	else:
-		offset.y = lerpf(offset.y, 0.0, camera_speed * delta)
+		offset.y = lerpf(offset.y, starting_offset.y, camera_speed * delta)
 
 
 func _input(event: InputEvent) -> void:

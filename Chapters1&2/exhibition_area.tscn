@@ -1,105 +1,110 @@
-[gd_scene load_steps=13 format=3 uid="uid://ygnmv8gr4d4l"]
+[gd_scene load_steps=9 format=3 uid="uid://ygnmv8gr4d4l"]
 
-[ext_resource type="Texture2D" uid="uid://dmnof4wemoehp" path="res://Chapters1&2/Assets/museum_floor.jpg" id="1_5pjr8"]
+[ext_resource type="Texture2D" uid="uid://cq1kew45cs37h" path="res://Chapters1&2/Assets/area1.jpg" id="1_oo5c1"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/doki.tscn" id="2_dfv45"]
-[ext_resource type="Texture2D" uid="uid://bln8ni056pv6u" path="res://Chapters1&2/Assets/door.jpeg" id="2_strwm"]
-[ext_resource type="PackedScene" uid="uid://d3ntet80ndr7y" path="res://Chapters1&2/Dialogue/dialog_area.tscn" id="3_dfv45"]
-[ext_resource type="Texture2D" uid="uid://dtorho3dqrpk1" path="res://Chapters1&2/Assets/pictures.jpeg" id="3_oo5c1"]
-[ext_resource type="PackedScene" uid="uid://b0avvf7852l5k" path="res://Chapters1&2/Dialogue/dialog_player.tscn" id="4_gffc0"]
-[ext_resource type="Texture2D" uid="uid://dniqm55qq8k8s" path="res://Chapters1&2/Assets/bookcase.jpg" id="4_lwwdm"]
-[ext_resource type="PackedScene" uid="uid://byqb73q2cpgi7" path="res://Chapters1&2/Characters/dragoon.tscn" id="8_oo5c1"]
+[ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Chapters1&2/Scripts/camera.gd" id="3_dfv45"]
+[ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Chapters1&2/Scenes/display_area.tscn" id="4_3y678"]
+[ext_resource type="Script" uid="uid://bf0exlx6plr1k" path="res://Chapters1&2/Scripts/art_piece.gd" id="4_gffc0"]
+[ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Chapters1&2/display_case.gd" id="4_n3v1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
-size = Vector2(5284, 37)
+size = Vector2(2521, 65)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfv45"]
-size = Vector2(121, 115)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gffc0"]
-size = Vector2(141, 131)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y678"]
-size = Vector2(225, 200)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3v1e"]
+size = Vector2(128, 864)
 
 [node name="Exhibition Area" type="Node"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1184, 400)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1000, 0)
+[node name="MuseumBackground" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.76796
+anchor_bottom = 0.999944
+offset_right = 8776.0
+offset_bottom = 2792.04
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("1_oo5c1")
 
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-offset_right = 1000.0
-offset_bottom = 689.0
-texture = ExtResource("1_5pjr8")
+[node name="Boundaries" type="StaticBody2D" parent="."]
+position = Vector2(0, 65)
 
-[node name="door" type="TextureRect" parent="."]
-offset_left = 268.0
-offset_top = 523.0
-offset_right = 493.0
-offset_bottom = 748.0
-scale = Vector2(0.525, 0.525)
-texture = ExtResource("2_strwm")
-
-[node name="pictures" type="TextureRect" parent="."]
-offset_left = 881.0
-offset_top = 522.0
-offset_right = 1085.0
-offset_bottom = 769.0
-scale = Vector2(0.465, 0.465)
-texture = ExtResource("3_oo5c1")
-
-[node name="bookcase" type="TextureRect" parent="."]
-offset_left = 1270.0
-offset_top = 438.0
-offset_right = 2806.0
-offset_bottom = 1974.0
-scale = Vector2(0.13, 0.13)
-texture = ExtResource("4_lwwdm")
-
-[node name="Ground" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(1427, 656.5)
+[node name="Floor" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(1132.5, 670.5)
 shape = SubResource("RectangleShape2D_ds5ad")
 
-[node name="ColorRect" type="ColorRect" parent="Ground"]
-offset_left = -1212.0
-offset_top = 638.0
-offset_right = 4067.0
-offset_bottom = 854.0
-color = Color(0.125911, 0.125911, 0.125911, 1)
+[node name="LeftWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(-64, 271)
+shape = SubResource("RectangleShape2D_n3v1e")
 
-[node name="DialogAreaDoor" parent="." instance=ExtResource("3_dfv45")]
-position = Vector2(94, 584)
-dialog_key = "door"
-
-[node name="CollisionShape2D" parent="DialogAreaDoor" index="0"]
-position = Vector2(232.5, -5.5)
-shape = SubResource("RectangleShape2D_dfv45")
-
-[node name="DialogAreaPictures" parent="." instance=ExtResource("3_dfv45")]
-position = Vector2(924, 554)
-dialog_key = "pictures"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogAreaPictures"]
-position = Vector2(5.5, 17.5)
-shape = SubResource("RectangleShape2D_gffc0")
-
-[node name="DialogAreaBookcase" parent="." instance=ExtResource("3_dfv45")]
-dialog_key = "bookcase"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DialogAreaBookcase"]
-position = Vector2(1368.5, 538)
-shape = SubResource("RectangleShape2D_3y678")
-
-[node name="Dragoon" parent="." instance=ExtResource("8_oo5c1")]
-position = Vector2(642, 598)
+[node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(2328, 271)
+shape = SubResource("RectangleShape2D_n3v1e")
 
 [node name="Doki" parent="." instance=ExtResource("2_dfv45")]
-position = Vector2(-46, 485)
+position = Vector2(288, 608)
 
-[node name="DialogPlayer" parent="." instance=ExtResource("4_gffc0")]
-dialogue_file = "res://Chapters1&2/Dialogue/json/dialogues.json"
+[node name="Camera2D" type="Camera2D" parent="Doki"]
+process_mode = 3
+position = Vector2(0, -56)
+offset = Vector2(0, -170)
+limit_left = 0
+limit_right = 2263
+limit_smoothed = true
+editor_draw_limits = true
+script = ExtResource("3_dfv45")
 
-[editable path="DialogAreaDoor"]
+[node name="Display Case" type="Node" parent="."]
+script = ExtResource("4_n3v1e")
+
+[node name="Trashcan" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(569, 649)
+
+[node name="DAD Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(774, 639)
+
+[node name="Thomas Edison" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(985, 546)
+
+[node name="Doki Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1566, 638)
+
+[node name="Play Button" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1739, 544)
+
+[node name="Guns" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1920, 638)
+
+[node name="BL Book" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(2114, 644)
+
+[node name="Art Pieces" type="Node" parent="Display Case"]
+
+[node name="Doki Statue" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="Guns" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="Play Button" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="BL Book" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="Thomas Edison" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="DAD Statue" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"
+
+[node name="Trashcan" type="StaticBody2D" parent="Display Case/Art Pieces"]
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://bf0exlx6plr1k"

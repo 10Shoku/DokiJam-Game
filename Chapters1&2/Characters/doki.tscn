@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhkalyr3d7nx0"]
+[gd_scene load_steps=5 format=3 uid="uid://dhkalyr3d7nx0"]
 
 [ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/doki.gd" id="1_an45n"]
 [ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_t7xgc"]
-[ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Chapters1&2/Scripts/camera.gd" id="3_8bcrg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
 animations = [{
@@ -16,30 +15,36 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rendh"]
-size = Vector2(24, 62)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7xgc"]
-size = Vector2(24, 62)
+size = Vector2(60, 101)
 
 [node name="Doki" type="CharacterBody2D"]
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.152, 0.152)
+scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_bsu7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 42.5)
 shape = SubResource("RectangleShape2D_rendh")
 
-[node name="DialogInteractionArea" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 0
+[node name="SpriteSet" type="Node2D" parent="."]
+visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
-shape = SubResource("RectangleShape2D_t7xgc")
+[node name="Head" type="Sprite2D" parent="SpriteSet"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-process_mode = 3
-position = Vector2(0, -56)
-zoom = Vector2(1.5, 1.5)
-script = ExtResource("3_8bcrg")
+[node name="Torso" type="Sprite2D" parent="SpriteSet"]
+
+[node name="RArm" type="Sprite2D" parent="SpriteSet"]
+
+[node name="LArm" type="Sprite2D" parent="SpriteSet"]
+
+[node name="RLeg" type="Sprite2D" parent="SpriteSet"]
+
+[node name="LLeg" type="Sprite2D" parent="SpriteSet"]
+
+[node name="CoatPiece" type="Sprite2D" parent="SpriteSet"]
+
+[node name="UpArm" type="Sprite2D" parent="SpriteSet"]
+
+[node name="MagnifyingGlass" type="Sprite2D" parent="SpriteSet"]

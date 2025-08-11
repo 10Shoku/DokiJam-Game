@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		camera.look_ahead(direction)
 		velocity.x = direction * speed
+		$AnimatedSprite2D.flip_h = direction > 0
 	else:
 		camera.look_normal()
 		velocity.x = move_toward(velocity.x, 0, speed)
