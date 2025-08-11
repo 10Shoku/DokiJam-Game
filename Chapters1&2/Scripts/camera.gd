@@ -18,7 +18,6 @@ var starting_offset : Vector2
 
 
 func _ready() -> void:
-	make_current()
 	starting_offset = offset
 	
 	SignalBus.display_dialog.connect(on_display_dialog)

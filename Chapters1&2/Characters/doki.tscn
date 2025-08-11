@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhkalyr3d7nx0"]
+[gd_scene load_steps=7 format=3 uid="uid://dhkalyr3d7nx0"]
 
 [ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/doki.gd" id="1_an45n"]
 [ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_t7xgc"]
+[ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Chapters1&2/Scripts/camera.gd" id="3_8bcrg"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0ieho"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
 animations = [{
@@ -17,7 +19,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rendh"]
 size = Vector2(60, 101)
 
-[node name="Doki" type="CharacterBody2D"]
+[node name="Doki" type="CharacterBody2D" groups=["doki"]]
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -28,23 +30,17 @@ sprite_frames = SubResource("SpriteFrames_bsu7h")
 position = Vector2(0, 42.5)
 shape = SubResource("RectangleShape2D_rendh")
 
-[node name="SpriteSet" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
 visible = false
+offset = Vector2(0, -250)
+enabled = false
+zoom = Vector2(0.822, 0.822)
+script = ExtResource("3_8bcrg")
 
-[node name="Head" type="Sprite2D" parent="SpriteSet"]
+[node name="Camera2D2" type="Camera2D" parent="."]
 
-[node name="Torso" type="Sprite2D" parent="SpriteSet"]
-
-[node name="RArm" type="Sprite2D" parent="SpriteSet"]
-
-[node name="LArm" type="Sprite2D" parent="SpriteSet"]
-
-[node name="RLeg" type="Sprite2D" parent="SpriteSet"]
-
-[node name="LLeg" type="Sprite2D" parent="SpriteSet"]
-
-[node name="CoatPiece" type="Sprite2D" parent="SpriteSet"]
-
-[node name="UpArm" type="Sprite2D" parent="SpriteSet"]
-
-[node name="MagnifyingGlass" type="Sprite2D" parent="SpriteSet"]
+[node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_0ieho")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
