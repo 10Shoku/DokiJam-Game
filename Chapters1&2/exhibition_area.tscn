@@ -1,13 +1,20 @@
-[gd_scene load_steps=20 format=3 uid="uid://ygnmv8gr4d4l"]
+[gd_scene load_steps=28 format=3 uid="uid://ygnmv8gr4d4l"]
 
 [ext_resource type="Texture2D" uid="uid://cq1kew45cs37h" path="res://Chapters1&2/Assets/area1.jpg" id="1_oo5c1"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/doki.tscn" id="2_dfv45"]
 [ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Chapters1&2/Scenes/display_area.tscn" id="4_3y678"]
-[ext_resource type="Script" uid="uid://bf0exlx6plr1k" path="res://Chapters1&2/Scripts/art_piece.gd" id="4_gffc0"]
+[ext_resource type="Script" uid="uid://ci2amanu0qc5x" path="res://Chapters1&2/Scripts/art_piece.gd" id="4_gffc0"]
 [ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Chapters1&2/display_case.gd" id="4_n3v1e"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_strwm"]
+[ext_resource type="Texture2D" uid="uid://i7l64r6nl8xj" path="res://Chapters1&2/Assets/Art Pieces/doki_statue.jpg" id="7_kqb2b"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_oo5c1"]
 [ext_resource type="Script" uid="uid://cri30jqtsjuoc" path="res://Chapters1&2/Scripts/camera_manager.gd" id="8_oo5c1"]
+[ext_resource type="Texture2D" uid="uid://cnlmhv7yvysuo" path="res://Chapters1&2/Assets/Art Pieces/guns.jpeg" id="9_jceom"]
+[ext_resource type="Texture2D" uid="uid://bf1ya4trrsqre" path="res://Chapters1&2/Assets/Art Pieces/play_button.jpg" id="10_vcg5c"]
+[ext_resource type="Texture2D" uid="uid://cq7ijmgeg7hmi" path="res://Chapters1&2/Assets/Art Pieces/bl_book.jpeg" id="11_1rpm1"]
+[ext_resource type="Texture2D" uid="uid://dhrcd11f24721" path="res://Chapters1&2/Assets/Art Pieces/thomas_edison.jpeg" id="12_ino2c"]
+[ext_resource type="Texture2D" uid="uid://3mhp6s1wuq4y" path="res://Chapters1&2/Assets/Art Pieces/dad_statue.jpg" id="13_fjkll"]
+[ext_resource type="Texture2D" uid="uid://bwxivphd3d2um" path="res://Chapters1&2/Assets/Art Pieces/trashcan.jpeg" id="14_dqlxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
 size = Vector2(2521, 65)
@@ -66,6 +73,12 @@ duration = 1.0
 transition = 10
 ease = 2
 
+[sub_resource type="Resource" id="Resource_jceom"]
+script = ExtResource("7_oo5c1")
+duration = 1.0
+transition = 10
+ease = 2
+
 [node name="Exhibition Area" type="Node"]
 
 [node name="MuseumBackground" type="TextureRect" parent="."]
@@ -76,6 +89,27 @@ offset_right = 8776.0
 offset_bottom = 2792.04
 scale = Vector2(0.205, 0.205)
 texture = ExtResource("1_oo5c1")
+
+[node name="ColorRect" type="ColorRect" parent="MuseumBackground"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1015.0
+offset_right = 0.0117188
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="MuseumBackground"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0117188
+offset_bottom = 1015.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 position = Vector2(0, 65)
@@ -91,6 +125,116 @@ shape = SubResource("RectangleShape2D_n3v1e")
 [node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(2328, 271)
 shape = SubResource("RectangleShape2D_n3v1e")
+
+[node name="Display Case" type="Node" parent="."]
+script = ExtResource("4_n3v1e")
+
+[node name="Trashcan" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(569, 649)
+
+[node name="DAD Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(774, 639)
+
+[node name="Thomas Edison" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(985, 624)
+
+[node name="Doki Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1566, 638)
+
+[node name="Play Button" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1739, 632)
+
+[node name="Guns" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(1920, 638)
+
+[node name="BL Book" parent="Display Case" instance=ExtResource("4_3y678")]
+position = Vector2(2114, 644)
+
+[node name="Art Pieces" type="Node" parent="Display Case"]
+
+[node name="Doki Statue" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 512.0
+offset_top = 536.0
+offset_right = 632.0
+offset_bottom = 656.0
+texture = ExtResource("7_kqb2b")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="Guns" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 720.0
+offset_top = 568.0
+offset_right = 840.0
+offset_bottom = 688.0
+texture = ExtResource("9_jceom")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="Play Button" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 928.0
+offset_top = 480.0
+offset_right = 1048.0
+offset_bottom = 600.0
+texture = ExtResource("10_vcg5c")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="BL Book" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 1504.0
+offset_top = 576.0
+offset_right = 1624.0
+offset_bottom = 696.0
+texture = ExtResource("11_1rpm1")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="Thomas Edison" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 1680.0
+offset_top = 480.0
+offset_right = 1800.0
+offset_bottom = 600.0
+texture = ExtResource("12_ino2c")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="DAD Statue" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 1848.0
+offset_top = 536.0
+offset_right = 1968.0
+offset_bottom = 656.0
+texture = ExtResource("13_fjkll")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="Trashcan" type="TextureRect" parent="Display Case/Art Pieces"]
+physics_interpolation_mode = 0
+offset_left = 2056.0
+offset_top = 568.0
+offset_right = 2176.0
+offset_bottom = 688.0
+texture = ExtResource("14_dqlxx")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_gffc0")
+metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
 [node name="Doki" parent="." instance=ExtResource("2_dfv45")]
 position = Vector2(104, 608)
@@ -111,61 +255,7 @@ limit_left = 0
 limit_right = 2263
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[node name="Display Case" type="Node" parent="."]
-script = ExtResource("4_n3v1e")
-
-[node name="Trashcan" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(569, 649)
-
-[node name="DAD Statue" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(774, 639)
-
-[node name="Thomas Edison" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(985, 546)
-
-[node name="Doki Statue" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(1566, 638)
-
-[node name="Play Button" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(1739, 544)
-
-[node name="Guns" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(1920, 638)
-
-[node name="BL Book" parent="Display Case" instance=ExtResource("4_3y678")]
-position = Vector2(2114, 644)
-
-[node name="Art Pieces" type="Node" parent="Display Case"]
-
-[node name="Doki Statue" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="Guns" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="Play Button" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="BL Book" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="Thomas Edison" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="DAD Statue" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="Trashcan" type="StaticBody2D" parent="Display Case/Art Pieces"]
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://bf0exlx6plr1k"
-
-[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("main_camera", "interaction_area_1", "interaction_area_2", "interaction_area_3", "interaction_area_4", "interaction_area_5", "interaction_area_6", "interaction_area_7", "camera_1", "camera_2", "camera_3", "camera_4", "camera_5", "camera_6", "camera_7")]
+[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("main_camera", "interaction_area_1", "interaction_area_2", "interaction_area_3", "interaction_area_4", "interaction_area_5", "interaction_area_6", "interaction_area_7", "camera_1", "camera_2", "camera_3", "camera_4", "camera_5", "camera_6", "camera_7", "view_all_camera")]
 script = ExtResource("8_oo5c1")
 main_camera = NodePath("../MainCamera")
 interaction_area_1 = NodePath("InteractionArea1")
@@ -182,6 +272,7 @@ camera_4 = NodePath("InteractionArea4/PhantomCamera2D")
 camera_5 = NodePath("InteractionArea5/PhantomCamera2D")
 camera_6 = NodePath("InteractionArea6/PhantomCamera2D")
 camera_7 = NodePath("InteractionArea7/PhantomCamera2D")
+view_all_camera = NodePath("AllArtPiecesView")
 
 [node name="InteractionArea1" type="Area2D" parent="CameraManager"]
 
@@ -246,7 +337,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 position = Vector2(1176, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea5"]
-position = Vector2(568, 615)
+position = Vector2(560, 616)
 shape = SubResource("RectangleShape2D_strwm")
 debug_color = Color(0, 1, 0.541176, 0.419608)
 
@@ -285,4 +376,11 @@ position = Vector2(568, 544)
 script = ExtResource("6_strwm")
 zoom = Vector2(2.06, 2.06)
 tween_resource = SubResource("Resource_1nhqy")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="AllArtPiecesView" type="Node2D" parent="CameraManager"]
+position = Vector2(1336, 352)
+script = ExtResource("6_strwm")
+zoom = Vector2(0.7, 0.7)
+tween_resource = SubResource("Resource_jceom")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"

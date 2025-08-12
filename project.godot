@@ -29,8 +29,8 @@ directories/dch_directory={
 "mr_man": "res://addons/dialogic/Characters/mr_man.dch"
 }
 directories/dtl_directory={
-"art_piece_swap": "res://art_piece_swap.dtl",
-"game_start": "res://addons/dialogic/Characters/Portraits/game_start.dtl"
+"art_piece_swap": "res://addons/dialogic/Timelines/art_piece_swap.dtl",
+"game_start": "res://addons/dialogic/Timelines/game_start.dtl"
 }
 layout/style_directory={
 "": "res://addons/dialogic/Styles/visual_novel.tres",
@@ -73,6 +73,10 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+timer/process_in_physics=false
+text/input_action="dialogic_default_action"
+animations/leave_default="Fade Out Down"
+animations/cross_fade_default="Fade Cross"
 
 [display]
 

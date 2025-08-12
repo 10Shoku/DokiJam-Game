@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ws7adqatpbhk"]
+[gd_scene load_steps=3 format=3 uid="uid://btbjy2fggyco5"]
 
-[ext_resource type="Script" uid="uid://bf0exlx6plr1k" path="res://Chapters1&2/Scripts/art_piece.gd" id="1_5yc1b"]
+[ext_resource type="Script" uid="uid://ci2amanu0qc5x" path="res://Chapters1&2/Scripts/art_piece.gd" id="1_5yc1b"]
+[ext_resource type="Texture2D" uid="uid://i7l64r6nl8xj" path="res://Chapters1&2/Assets/Art Pieces/doki_statue.jpg" id="1_a8e07"]
 
-[node name="ArtPiece" type="StaticBody2D"]
+[node name="ArtPiece" type="TextureRect"]
+offset_right = 345.125
+offset_bottom = 120.0
+texture = ExtResource("1_a8e07")
+expand_mode = 1
+stretch_mode = 5
 script = ExtResource("1_5yc1b")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

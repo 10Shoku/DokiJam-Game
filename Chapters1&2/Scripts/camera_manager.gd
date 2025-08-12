@@ -18,8 +18,15 @@ extends Node
 @export var camera_6 : PhantomCamera2D
 @export var camera_7 : PhantomCamera2D
 
+@export var view_all_camera : PhantomCamera2D
+
 var is_interacting := false
 var current_interaction_area : Area2D
+
+
+func _ready() -> void:
+	Dialogic.signal_event.connect(_show_all_pieces)
+	Dialogic.signal_event.connect(_normal_view)
 
 
 func _input(event: InputEvent) -> void:
@@ -85,3 +92,13 @@ func update_camera():
 			camera_6.priority = 1
 		interaction_area_7:
 			camera_7.priority = 1
+
+
+func _show_all_pieces(arg : String):
+	if arg == "show all art pieces":
+		view_all_camera.priority = 2
+
+
+func _normal_view(arg : String):
+	if arg == "":
+		view_all_camera.priority = 0

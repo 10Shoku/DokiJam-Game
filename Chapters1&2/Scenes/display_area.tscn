@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://cd6127kreh5hv" path="res://Chapters1&2/Scripts/display_area.gd" id="1_wcxoy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcxoy"]
-size = Vector2(82, 92)
+size = Vector2(144, 92)
 
-[node name="DisplayArea" type="Area2D"]
+[node name="DisplayArea" type="Area2D" groups=["display_area"]]
+process_mode = 3
 script = ExtResource("1_wcxoy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wcxoy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

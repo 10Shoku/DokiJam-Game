@@ -1,0 +1,4 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+Choose which art piece to swap with.
+[signal arg="show all art pieces"]
+[signal arg="glow art pieces"]
