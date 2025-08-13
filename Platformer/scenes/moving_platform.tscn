@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1xcw3lf4trpc"]
+
+[ext_resource type="Script" uid="uid://cg1rbydmdv4sj" path="res://Platformer/scripts/platform.gd" id="1_ms375"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ms375"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_1tdcd"]
+size = Vector2(1000, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb26n"]
+size = Vector2(1000, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms375"]
+size = Vector2(993.5, 96.5)
+
+[node name="moving_platform" type="Node2D"]
+position = Vector2(0, -11)
+script = ExtResource("1_ms375")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+unique_name_in_owner = true
+physics_material_override = SubResource("PhysicsMaterial_ms375")
+
+[node name="Platform2" type="StaticBody2D" parent="AnimatableBody2D"]
+position = Vector2(1504, 438)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="AnimatableBody2D/Platform2"]
+modulate = Color(0.723666, 0.982412, 2.31028e-06, 1)
+mesh = SubResource("QuadMesh_1tdcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/Platform2"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_mb26n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(1505.25, 434.75)
+shape = SubResource("RectangleShape2D_ms375")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyibvyfnun3q2"]
+
+[ext_resource type="Script" uid="uid://bnvqlpqib5xnc" path="res://manager/level_manager.gd" id="1_06fa7"]
+
+[node name="LevelManager" type="Node"]
+script = ExtResource("1_06fa7")
+
+[node name="Control" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+offset_right = 4.0
+offset_bottom = 27.0
