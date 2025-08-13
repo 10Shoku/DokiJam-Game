@@ -1,20 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://ujk2qdknxt5a"]
 
 [ext_resource type="Script" uid="uid://1cxusq4txntr" path="res://Pause Menu/pause_menu.gd" id="1_0g3m2"]
-[ext_resource type="Texture2D" uid="uid://5g02hac18c6a" path="res://Pause Menu/Assets/pause_menu_book_left.jpg" id="2_4x5p1"]
-[ext_resource type="Texture2D" uid="uid://d1a2odaemuixl" path="res://Pause Menu/Assets/pause_menu_book_right.jpg" id="3_iss3t"]
+[ext_resource type="Texture2D" uid="uid://b2mdwv1ojlear" path="res://Pause Menu/Assets/pause_menu_book_left.jpg" id="2_4x5p1"]
+[ext_resource type="Texture2D" uid="uid://babaeu3ciyu7h" path="res://Pause Menu/Assets/pause_menu_book_right.jpg" id="3_iss3t"]
 
-[node name="PauseMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 100
 script = ExtResource("1_0g3m2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -99,10 +94,10 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 30
 
-[node name="Quit" type="Button" parent="HBoxContainer/Menu Options/VBoxContainer/MarginContainer5"]
+[node name="MainMenu" type="Button" parent="HBoxContainer/Menu Options/VBoxContainer/MarginContainer5"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Quit"
+text = "Main Menu"
 
 [node name="Objectives" type="NinePatchRect" parent="HBoxContainer"]
 layout_mode = 2
@@ -199,4 +194,4 @@ color = Color(0.54099, 0.54099, 0.54099, 1)
 [connection signal="pressed" from="HBoxContainer/Menu Options/VBoxContainer/MarginContainer2/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="HBoxContainer/Menu Options/VBoxContainer/MarginContainer3/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="HBoxContainer/Menu Options/VBoxContainer/MarginContainer4/Achievements" to="." method="_on_achievements_pressed"]
-[connection signal="pressed" from="HBoxContainer/Menu Options/VBoxContainer/MarginContainer5/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HBoxContainer/Menu Options/VBoxContainer/MarginContainer5/MainMenu" to="." method="_on_main_menu_pressed"]

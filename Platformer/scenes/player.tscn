@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnqdujvqpo8rc"]
+
+[ext_resource type="Script" uid="uid://dnxgqse6ve2vl" path="res://Platformer/scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://cctov37xevps7" path="res://Platformer/audio/sfx/Death_sound.wav" id="4_dqkch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+region = Rect2(0, 0, 341, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+region = Rect2(416, 0, 380, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+region = Rect2(785, 0, 371, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+region = Rect2(1166, 0, 384, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+region = Rect2(1550, 0, 384, 409)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(52, 127)
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3, -66)
+scale = Vector2(0.414063, 0.992188)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.500001, -65.5)
+scale = Vector2(0.429687, 0.320293)
+sprite_frames = SubResource("SpriteFrames_ur7pv")
+animation = &"idle"
+frame = 4
+frame_progress = 0.977856
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -66.5)
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-7, -175)
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dqkch")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://cw2y4kmm07my2"]
+
+[ext_resource type="PackedScene" uid="uid://drnld3h3v10a7" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dnoqho1ot188j" path="res://Scripts/main.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://8ncu62l00dap" path="res://Scenes/coin.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://ifh280gbfecl" path="res://icon.svg" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://cofl075ljx2nw" path="res://Scenes/coin_ui.tscn" id="4_jjvhh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8gbba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
+size = Vector2(855, 67)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_kry3j")
+
+[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(204, 366)
+
+[node name="Coin" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(535, 369)
+scale = Vector2(4.16, 4.24)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(460, 582)
+scale = Vector2(6.65625, 0.546875)
+texture = ExtResource("3_8gbba")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+physics_material_override = SubResource("PhysicsMaterial_8gbba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-0.225342, -0.914185)
+scale = Vector2(0.150235, 1.82857)
+shape = SubResource("RectangleShape2D_jjgbg")
+
+[node name="CoinUI" parent="." instance=ExtResource("4_jjvhh")]
