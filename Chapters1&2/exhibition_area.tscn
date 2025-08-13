@@ -90,26 +90,18 @@ offset_bottom = 2792.04
 scale = Vector2(0.205, 0.205)
 texture = ExtResource("1_oo5c1")
 
-[node name="ColorRect" type="ColorRect" parent="MuseumBackground"]
+[node name="Background" type="ColorRect" parent="MuseumBackground"]
+z_index = -1
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -1015.0
-offset_right = 0.0117188
+anchors_preset = -1
+anchor_left = -0.269137
+anchor_top = -0.644647
+anchor_right = 1.26914
+anchor_bottom = 1.64436
 grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="MuseumBackground"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0117188
-offset_bottom = 1015.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 position = Vector2(0, 65)
@@ -164,6 +156,11 @@ stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
+[node name="Doki Statue Button" type="Button" parent="Display Case/Art Pieces/Doki Statue"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Guns" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
 offset_left = 720.0
@@ -175,6 +172,11 @@ expand_mode = 1
 stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="Guns Button" type="Button" parent="Display Case/Art Pieces/Guns"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="Play Button" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
@@ -188,6 +190,11 @@ stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
+[node name="Play Button Button" type="Button" parent="Display Case/Art Pieces/Play Button"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="BL Book" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
 offset_left = 1504.0
@@ -199,6 +206,11 @@ expand_mode = 1
 stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="BL Book Button" type="Button" parent="Display Case/Art Pieces/BL Book"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="Thomas Edison" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
@@ -212,6 +224,11 @@ stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
+[node name="Thomas Edison Button" type="Button" parent="Display Case/Art Pieces/Thomas Edison"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="DAD Statue" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
 offset_left = 1848.0
@@ -223,6 +240,11 @@ expand_mode = 1
 stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
+
+[node name="DAD Statue Button" type="Button" parent="Display Case/Art Pieces/DAD Statue"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="Trashcan" type="TextureRect" parent="Display Case/Art Pieces"]
 physics_interpolation_mode = 0
@@ -236,15 +258,20 @@ stretch_mode = 5
 script = ExtResource("4_gffc0")
 metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
+[node name="Trashcan Button" type="Button" parent="Display Case/Art Pieces/Trashcan"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Doki" parent="." instance=ExtResource("2_dfv45")]
-position = Vector2(104, 608)
+position = Vector2(200, 440)
 
 [node name="CameraTarget" type="Node2D" parent="Doki"]
 position = Vector2(0, -250)
 
 [node name="MainCamera" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(640, 358)
+position = Vector2(640, 190)
 script = ExtResource("6_strwm")
 follow_mode = 1
 follow_target = NodePath("../Doki/CameraTarget")
@@ -384,3 +411,11 @@ script = ExtResource("6_strwm")
 zoom = Vector2(0.7, 0.7)
 tween_resource = SubResource("Resource_jceom")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[connection signal="pressed" from="Display Case/Art Pieces/Doki Statue/Doki Statue Button" to="Display Case" method="_on_doki_statue_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/Guns/Guns Button" to="Display Case" method="_on_guns_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/Play Button/Play Button Button" to="Display Case" method="_on_play_button_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/BL Book/BL Book Button" to="Display Case" method="_on_bl_book_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/Thomas Edison/Thomas Edison Button" to="Display Case" method="_on_thomas_edison_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/DAD Statue/DAD Statue Button" to="Display Case" method="_on_dad_statue_button_pressed"]
+[connection signal="pressed" from="Display Case/Art Pieces/Trashcan/Trashcan Button" to="Display Case" method="_on_trashcan_button_pressed"]

@@ -25,18 +25,19 @@ var current_interaction_area : Area2D
 
 
 func _ready() -> void:
+	Dialogic.timeline_started.connect(_on_timeline_start)
+	Dialogic.timeline_ended.connect(_on_timeline_end)
 	Dialogic.signal_event.connect(_show_all_pieces)
 	Dialogic.signal_event.connect(_normal_view)
 
 
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact"):
-		if is_interacting:
-			is_interacting = false
-			update_camera()
-			main_camera.priority = 1
-		else:
-			find_interaction()
+func _on_timeline_start():
+	is_interacting = true
+	find_interaction()
+
+
+func _on_timeline_end():
+	is_interacting = false
 
 
 func find_interaction():
@@ -62,7 +63,7 @@ func find_interaction():
 					update_camera()
 
 
-func update_camera():
+func update_camera(main := false):
 	var cameras : Array[PhantomCamera2D] = [
 		camera_1,
 		camera_2,
@@ -76,6 +77,12 @@ func update_camera():
 	for camera in cameras:
 		if camera != null:
 			camera.priority = 0
+	
+	if main:
+		main_camera.priority = 1
+		return
+	
+	main_camera.priority = 0
 	
 	match current_interaction_area:
 		interaction_area_1:
@@ -96,9 +103,12 @@ func update_camera():
 
 func _show_all_pieces(arg : String):
 	if arg == "show all art pieces":
-		view_all_camera.priority = 2
+		update_camera()
+		view_all_camera.priority = 1
 
 
 func _normal_view(arg : String):
-	if arg == "":
+	if arg == "normal view":
+		is_interacting = false
+		update_camera(true)
 		view_all_camera.priority = 0

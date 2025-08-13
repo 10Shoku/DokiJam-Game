@@ -19,3 +19,31 @@ func swap_pieces(from : ArtPiece, to : ArtPiece):
 	swap_var = from.global_position
 	from.global_position = to.global_position
 	to.global_position = swap_var
+
+
+#func _on_doki_statue_button_pressed() -> void:
+	#swap_pieces(, doki_statue)
+#
+#
+#func _on_guns_button_pressed() -> void:
+	#swap_pieces(, guns)
+#
+#
+#func _on_play_button_button_pressed() -> void:
+	#swap_pieces(, play_button)
+#
+#
+#func _on_bl_book_button_pressed() -> void:
+	#swap_pieces(, bl_book)
+#
+#
+#func _on_thomas_edison_button_pressed() -> void:
+	#swap_pieces(, thomas_edison)
+#
+#
+#func _on_dad_statue_button_pressed() -> void:
+	#swap_pieces(, dad_statue)
+#
+#
+#func _on_trashcan_button_pressed() -> void:
+	#swap_pieces(, trashcan)

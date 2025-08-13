@@ -15,10 +15,12 @@ func _ready():
 
 func _on_timeline_started():
 	is_interacting.emit(true)
+	can_interact = false
 
 
 func _on_timeline_ended():
 	is_interacting.emit(false)
+	can_interact = true
 
 
 func _input(event: InputEvent) -> void:
@@ -26,21 +28,23 @@ func _input(event: InputEvent) -> void:
 		Dialogic.start("art_piece_swap")
 
 
+func lock_piece(body: ArtPiece):
+	print("piece locked")
+	is_movable = false
+	body.is_correctly_placed = true
+
+
+# gotta make the swap functionality first
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("doki"):
 		can_interact = true
 	
-	print(body.name + " entered Display Area of " + self.name)
-	if body == correct_piece:
-		lock_piece(body)
+	if body is ArtPiece:
+		print(body, correct_piece)
+		if body == correct_piece:
+			lock_piece(body)
 
 
 func _on_body_exited(body: CharacterBody2D) -> void:
 	if body.is_in_group("doki"):
 		can_interact = false
-
-
-func lock_piece(body: ArtPiece):
-	print("piece locked")
-	is_movable = false
-	body.glow()
