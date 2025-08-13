@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LevelConfig" load_steps=2 format=3 uid="uid://fuic36ntk3i"]
+
+[ext_resource type="Script" uid="uid://wyqihbagso7f" path="res://Platformer/manager/level_config.gd" id="1_47vf7"]
+
+[resource]
+script = ExtResource("1_47vf7")
+fall_death_offset = 3000.0
+spawn_points = Array[Vector2]([])
+metadata/_custom_type_script = "uid://fq6mv4i4q1b7"
