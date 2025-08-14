@@ -1,15 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhkalyr3d7nx0"]
+[gd_scene load_steps=8 format=3 uid="uid://dhkalyr3d7nx0"]
 
 [ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Chapters1&2/Scripts/doki.gd" id="1_an45n"]
-[ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_t7xgc"]
+[ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Chapters1&2/Assets/dokidoki.jpg" id="2_0ieho"]
 [ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Chapters1&2/Scripts/camera.gd" id="3_8bcrg"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0ieho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmqs3"]
+atlas = ExtResource("2_0ieho")
+region = Rect2(0, 0, 250, 418)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_t7xgc")
+"texture": SubResource("AtlasTexture_pmqs3")
 }],
 "loop": true,
 "name": &"default",
@@ -23,8 +27,9 @@ size = Vector2(60, 101)
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.448, 0.448)
 sprite_frames = SubResource("SpriteFrames_bsu7h")
+frame_progress = 0.252281
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 42.5)

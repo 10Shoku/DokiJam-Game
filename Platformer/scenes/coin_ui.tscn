@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cofl075ljx2nw"]
 
-[ext_resource type="Script" uid="uid://dubawmpuhrjic" path="res://scripts/coin_ui.gd" id="1_hj0ky"]
+[ext_resource type="Script" uid="uid://dubawmpuhrjic" path="res://Platformer/scripts/coin_ui.gd" id="1_hj0ky"]
 
 [node name="CoinUI" type="CanvasLayer" groups=["coin_ui"]]
 script = ExtResource("1_hj0ky")

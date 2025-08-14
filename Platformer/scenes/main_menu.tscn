@@ -1,11 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://y4773v2nkyex"]
+[gd_scene load_steps=7 format=3 uid="uid://y4773v2nkyex"]
 
-[ext_resource type="Script" uid="uid://bqi6abc8b4r8t" path="res://scenes/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://bfe8n0ii6tod0" path="res://art/Akishi BG 4.jpg" id="1_ekxnf"]
-[ext_resource type="FontFile" uid="uid://bk4i54s437rrh" path="res://art/BRLNSDB.TTF" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://bqi6abc8b4r8t" path="res://Platformer/scenes/main_menu.gd" id="1_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
-texture = ExtResource("1_ekxnf")
 modulate_color = Color(0.527083, 0.527083, 0.527083, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
@@ -125,7 +122,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/font = ExtResource("2_bqqt6")
 theme_override_font_sizes/font_size = 80
 text = "Platformer Adventure"
 horizontal_alignment = 1

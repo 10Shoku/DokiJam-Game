@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ex0b06ae73qk"]
+[gd_scene load_steps=3 format=3 uid="uid://ex0b06ae73qk"]
 
 [ext_resource type="Script" uid="uid://c605ro0sftduj" path="res://Platformer/scripts/coin.gd" id="1_2qo34"]
-[ext_resource type="Texture2D" uid="uid://dr67lxjbgplrc" path="res://Platformer/art/icon.svg" id="2_jgi06"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qo34"]
 
@@ -10,7 +9,6 @@ script = ExtResource("1_2qo34")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.148438, 0.140625)
-texture = ExtResource("2_jgi06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2qo34")

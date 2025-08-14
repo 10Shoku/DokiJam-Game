@@ -4,9 +4,11 @@ class_name DisplayArea
 signal is_interacting(it_is : bool)
 
 @export var correct_piece : ArtPiece
+@export var current_piece : ArtPiece
 
 var is_movable := true
 var can_interact := false
+
 
 func _ready():
 	Dialogic.timeline_started.connect(_on_timeline_started)

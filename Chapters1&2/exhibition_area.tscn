@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cq1kew45cs37h" path="res://Chapters1&2/Assets/area1.jpg" id="1_oo5c1"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/doki.tscn" id="2_dfv45"]
 [ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Chapters1&2/Scenes/display_area.tscn" id="4_3y678"]
-[ext_resource type="Script" uid="uid://ci2amanu0qc5x" path="res://Chapters1&2/Scripts/art_piece.gd" id="4_gffc0"]
-[ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Chapters1&2/display_case.gd" id="4_n3v1e"]
+[ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Chapters1&2/Scripts/display_case.gd" id="4_n3v1e"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_strwm"]
 [ext_resource type="Texture2D" uid="uid://i7l64r6nl8xj" path="res://Chapters1&2/Assets/Art Pieces/doki_statue.jpg" id="7_kqb2b"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_oo5c1"]
 [ext_resource type="Script" uid="uid://cri30jqtsjuoc" path="res://Chapters1&2/Scripts/camera_manager.gd" id="8_oo5c1"]
 [ext_resource type="Texture2D" uid="uid://cnlmhv7yvysuo" path="res://Chapters1&2/Assets/Art Pieces/guns.jpeg" id="9_jceom"]
+[ext_resource type="PackedScene" uid="uid://btbjy2fggyco5" path="res://Chapters1&2/Scenes/art_piece.tscn" id="10_1nhqy"]
 [ext_resource type="Texture2D" uid="uid://bf1ya4trrsqre" path="res://Chapters1&2/Assets/Art Pieces/play_button.jpg" id="10_vcg5c"]
 [ext_resource type="Texture2D" uid="uid://cq7ijmgeg7hmi" path="res://Chapters1&2/Assets/Art Pieces/bl_book.jpeg" id="11_1rpm1"]
 [ext_resource type="Texture2D" uid="uid://dhrcd11f24721" path="res://Chapters1&2/Assets/Art Pieces/thomas_edison.jpeg" id="12_ino2c"]
@@ -94,10 +94,10 @@ texture = ExtResource("1_oo5c1")
 z_index = -1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.269137
-anchor_top = -0.644647
-anchor_right = 1.26914
-anchor_bottom = 1.64436
+anchor_left = -0.325233
+anchor_top = -0.477804
+anchor_right = 1.21304
+anchor_bottom = 1.8112
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -121,157 +121,94 @@ shape = SubResource("RectangleShape2D_n3v1e")
 [node name="Display Case" type="Node" parent="."]
 script = ExtResource("4_n3v1e")
 
-[node name="Trashcan" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="Trashcan" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(569, 649)
+correct_piece = NodePath("../Art Pieces/Trashcan")
+current_piece = NodePath("../Art Pieces/Doki Statue")
 
-[node name="DAD Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="DAD Statue" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(774, 639)
+correct_piece = NodePath("../Art Pieces/DAD  Statue")
+current_piece = NodePath("../Art Pieces/Guns")
 
-[node name="Thomas Edison" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="Thomas Edison" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(985, 624)
+correct_piece = NodePath("../Art Pieces/Thomas Edison")
+current_piece = NodePath("../Art Pieces/Play Button")
 
-[node name="Doki Statue" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="Doki Statue" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(1566, 638)
+correct_piece = NodePath("../Art Pieces/Doki Statue")
+current_piece = NodePath("../Art Pieces/BL Book")
 
-[node name="Play Button" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="Play Button" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(1739, 632)
+correct_piece = NodePath("../Art Pieces/Play Button")
+current_piece = NodePath("../Art Pieces/Thomas Edison")
 
-[node name="Guns" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="Guns" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(1920, 638)
+correct_piece = NodePath("../Art Pieces/Guns")
+current_piece = NodePath("../Art Pieces/DAD  Statue")
 
-[node name="BL Book" parent="Display Case" instance=ExtResource("4_3y678")]
+[node name="BL Book" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
 position = Vector2(2114, 644)
+correct_piece = NodePath("../Art Pieces/BL Book")
+current_piece = NodePath("../Art Pieces/Trashcan")
 
 [node name="Art Pieces" type="Node" parent="Display Case"]
 
-[node name="Doki Statue" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 512.0
-offset_top = 536.0
-offset_right = 632.0
-offset_bottom = 656.0
+[node name="Doki Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(512, 528)
+
+[node name="Sprite2D" parent="Display Case/Art Pieces/Doki Statue" index="0"]
 texture = ExtResource("7_kqb2b")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="Doki Statue Button" type="Button" parent="Display Case/Art Pieces/Doki Statue"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Guns" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(712, 544)
 
-[node name="Guns" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 720.0
-offset_top = 568.0
-offset_right = 840.0
-offset_bottom = 688.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/Guns" index="0"]
 texture = ExtResource("9_jceom")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="Guns Button" type="Button" parent="Display Case/Art Pieces/Guns"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Play Button" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(920, 544)
 
-[node name="Play Button" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 928.0
-offset_top = 480.0
-offset_right = 1048.0
-offset_bottom = 600.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/Play Button" index="0"]
 texture = ExtResource("10_vcg5c")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="Play Button Button" type="Button" parent="Display Case/Art Pieces/Play Button"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="BL Book" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(1504, 568)
 
-[node name="BL Book" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 1504.0
-offset_top = 576.0
-offset_right = 1624.0
-offset_bottom = 696.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/BL Book" index="0"]
 texture = ExtResource("11_1rpm1")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="BL Book Button" type="Button" parent="Display Case/Art Pieces/BL Book"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Thomas Edison" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(1680, 480)
 
-[node name="Thomas Edison" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 1680.0
-offset_top = 480.0
-offset_right = 1800.0
-offset_bottom = 600.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/Thomas Edison" index="0"]
 texture = ExtResource("12_ino2c")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="Thomas Edison Button" type="Button" parent="Display Case/Art Pieces/Thomas Edison"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="DAD  Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(1856, 560)
 
-[node name="DAD Statue" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 1848.0
-offset_top = 536.0
-offset_right = 1968.0
-offset_bottom = 656.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/DAD  Statue" index="0"]
 texture = ExtResource("13_fjkll")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
 
-[node name="DAD Statue Button" type="Button" parent="Display Case/Art Pieces/DAD Statue"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Trashcan" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
+position = Vector2(2056, 560)
 
-[node name="Trashcan" type="TextureRect" parent="Display Case/Art Pieces"]
-physics_interpolation_mode = 0
-offset_left = 2056.0
-offset_top = 568.0
-offset_right = 2176.0
-offset_bottom = 688.0
+[node name="Sprite2D" parent="Display Case/Art Pieces/Trashcan" index="0"]
 texture = ExtResource("14_dqlxx")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("4_gffc0")
-metadata/_custom_type_script = "uid://ci2amanu0qc5x"
-
-[node name="Trashcan Button" type="Button" parent="Display Case/Art Pieces/Trashcan"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
 
 [node name="Doki" parent="." instance=ExtResource("2_dfv45")]
-position = Vector2(200, 440)
+position = Vector2(728, 456)
 
 [node name="CameraTarget" type="Node2D" parent="Doki"]
 position = Vector2(0, -250)
 
 [node name="MainCamera" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(640, 190)
+position = Vector2(728, 206)
 script = ExtResource("6_strwm")
 follow_mode = 1
 follow_target = NodePath("../Doki/CameraTarget")
@@ -412,10 +349,10 @@ zoom = Vector2(0.7, 0.7)
 tween_resource = SubResource("Resource_jceom")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
-[connection signal="pressed" from="Display Case/Art Pieces/Doki Statue/Doki Statue Button" to="Display Case" method="_on_doki_statue_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/Guns/Guns Button" to="Display Case" method="_on_guns_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/Play Button/Play Button Button" to="Display Case" method="_on_play_button_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/BL Book/BL Book Button" to="Display Case" method="_on_bl_book_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/Thomas Edison/Thomas Edison Button" to="Display Case" method="_on_thomas_edison_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/DAD Statue/DAD Statue Button" to="Display Case" method="_on_dad_statue_button_pressed"]
-[connection signal="pressed" from="Display Case/Art Pieces/Trashcan/Trashcan Button" to="Display Case" method="_on_trashcan_button_pressed"]
+[editable path="Display Case/Art Pieces/Doki Statue"]
+[editable path="Display Case/Art Pieces/Guns"]
+[editable path="Display Case/Art Pieces/Play Button"]
+[editable path="Display Case/Art Pieces/BL Book"]
+[editable path="Display Case/Art Pieces/Thomas Edison"]
+[editable path="Display Case/Art Pieces/DAD  Statue"]
+[editable path="Display Case/Art Pieces/Trashcan"]

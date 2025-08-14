@@ -1,5 +1,8 @@
 [background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+# Have the buff dragoon help with swapping pieces
 Choose which art piece to swap with.
+leave doki [animation="Slide To Left" wait="true"]
 [signal arg="show all art pieces"]
 [signal arg="glow art pieces"]
 [wait time="3.0" hide_text="false"]

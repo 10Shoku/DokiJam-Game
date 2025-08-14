@@ -1,10 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cw2y4kmm07my2"]
+[gd_scene load_steps=5 format=3 uid="uid://cw2y4kmm07my2"]
 
-[ext_resource type="PackedScene" uid="uid://drnld3h3v10a7" path="res://Scenes/player.tscn" id="1_jjgbg"]
-[ext_resource type="Script" uid="uid://dnoqho1ot188j" path="res://Scripts/main.gd" id="1_kry3j"]
-[ext_resource type="PackedScene" uid="uid://8ncu62l00dap" path="res://Scenes/coin.tscn" id="2_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://ifh280gbfecl" path="res://icon.svg" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://cofl075ljx2nw" path="res://Scenes/coin_ui.tscn" id="4_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://d1k58efbjiwdr" path="res://icon.svg" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://cofl075ljx2nw" path="res://Platformer/scenes/coin_ui.tscn" id="4_jjvhh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8gbba"]
 
@@ -12,14 +9,33 @@
 size = Vector2(855, 67)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_kry3j")
 
-[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+[node name="Player" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(204, 366)
+script = null
 
-[node name="Coin" parent="." instance=ExtResource("2_bo1nx")]
+[node name="Coin" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(535, 369)
 scale = Vector2(4.16, 4.24)
+script = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(460, 582)
