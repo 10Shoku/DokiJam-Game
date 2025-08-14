@@ -3,6 +3,9 @@ class_name DisplayArea
 
 signal is_interacting(it_is : bool)
 
+signal doki_entered(area : DisplayArea)
+signal doki_exited(area : DisplayArea)
+
 @export var correct_piece : ArtPiece
 @export var current_piece : ArtPiece
 
@@ -37,16 +40,23 @@ func lock_piece(body: ArtPiece):
 
 
 # gotta make the swap functionality first
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("doki"):
 		can_interact = true
+		doki_entered.emit(self)
 	
-	if body is ArtPiece:
-		print(body, correct_piece)
+	elif body is ArtPiece:
+		current_piece = body
+		print("wait what")
 		if body == correct_piece:
 			lock_piece(body)
 
 
-func _on_body_exited(body: CharacterBody2D) -> void:
+func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("doki"):
+		doki_exited.emit(self)
 		can_interact = false
+	
+	elif body is ArtPiece and body == current_piece:
+		print("exited area: ", self, "piece: ", body)
+		current_piece = null

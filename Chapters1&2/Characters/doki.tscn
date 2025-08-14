@@ -44,7 +44,7 @@ script = ExtResource("3_8bcrg")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 limit_left = 0
-limit_right = 2263
+limit_right = 4464
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
 process_priority = 300

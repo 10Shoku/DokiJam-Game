@@ -16,21 +16,36 @@ extends Node
 @onready var dad_statue: ArtPiece = $"Art Pieces/DAD Statue"
 @onready var trashcan: ArtPiece = $"Art Pieces/Trashcan"
 
-var current_area : DisplayArea
+var doki_current_areas : Array[DisplayArea] = []
 
 
 func _ready() -> void:
+	for area : DisplayArea in get_tree().get_nodes_in_group("display_area"):
+		area.doki_entered.connect(_on_doki_entered)
+		area.doki_exited.connect(_on_doki_exited)
+	
 	for piece : ArtPiece in get_tree().get_nodes_in_group("art_piece"):
 		piece.piece_clicked.connect(_on_piece_clicked)
 
 
+func _on_doki_entered(area : DisplayArea):
+	if area not in doki_current_areas:
+		doki_current_areas.append(area)
+	print("\nEntering...")
+	print("Current Area: " + str(area))
+	print("Current Piece: " + str(area.current_piece))
+
+
+func _on_doki_exited(area : DisplayArea):
+	#print("\nExiting...")
+	#print("Current Area: " + str(area))
+	#print("Current Piece: " + str(area.current_piece))
+	doki_current_areas.erase(area)
+
+
 func get_current_area() -> DisplayArea:
-	for area : DisplayArea in get_tree().get_nodes_in_group("display_area"):
-		for body in area.get_overlapping_bodies():
-			if body.is_in_group("doki"):
-				print("Current Area: " + str(area))
-				print("Current Piece: " + str(area.current_piece))
-				return area
+	if doki_current_areas.size() > 0:
+		return doki_current_areas[-1]
 	
 	return null
 
@@ -41,29 +56,36 @@ func update_case_info():
 
 
 func swap_pieces(from: DisplayArea, to: DisplayArea):
-	var artpiece_swap_var : ArtPiece
+	if from.current_piece == null or to.current_piece == null:
+		print("❌ One of the areas has no piece to swap.")
+		return
 	
+	#var artpiece_swap_var : ArtPiece = null
+	#
 	print("\nBefore swap:\n\tCurrent Piece: " + str(from.current_piece) + "\n\tSwap With: " + str(to.current_piece))
-	artpiece_swap_var = from.current_piece
-	from.current_piece = to.current_piece
-	to.current_piece = artpiece_swap_var
-	print("After swap:\n\tCurrent Piece: " + str(from.current_piece) + "\n\tSwap With: " + str(to.current_piece))
+	#artpiece_swap_var = from.current_piece
+	#from.current_piece = to.current_piece
+	#to.current_piece = artpiece_swap_var
 	
-	var position_swap_var : Vector2
+	var position_swap_var := Vector2.ZERO
 	
 	position_swap_var = from.current_piece.global_position
 	from.current_piece.global_position = to.current_piece.global_position
 	to.current_piece.global_position = position_swap_var
+	print("After swap:\n\tCurrent Piece: " + str(from.current_piece) + "\n\tSwap With: " + str(to.current_piece))
 	
-	update_case_info()
+	print("\n\nSwap " + str(from) + " and " + str(to) + "\n\n")
+	
+	#update_case_info()
  
 
 
 func _on_piece_clicked(piece : ArtPiece):
-	var from_area = get_current_area()
-	if from_area == null:
-		print("\nWarning: Doki not found in any display area!")
+	if doki_current_areas.is_empty():
+		print("\nDoki not in any area")
 		return
+	
+	var from_area = get_current_area()
 	
 	print("\n-----------------------------------\nPiece to swap with: " + str(piece))
 	match piece:

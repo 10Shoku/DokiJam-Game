@@ -85,7 +85,7 @@ ease = 2
 anchors_preset = -1
 anchor_right = 1.76796
 anchor_bottom = 0.999944
-offset_right = 8776.0
+offset_right = 19513.0
 offset_bottom = 2792.04
 scale = Vector2(0.205, 0.205)
 texture = ExtResource("1_oo5c1")
@@ -94,10 +94,10 @@ texture = ExtResource("1_oo5c1")
 z_index = -1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.325233
-anchor_top = -0.477804
-anchor_right = 1.21304
-anchor_bottom = 1.8112
+anchor_left = -0.32522
+anchor_top = -0.888952
+anchor_right = 1.37096
+anchor_bottom = 1.81122
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -115,87 +115,87 @@ position = Vector2(-64, 271)
 shape = SubResource("RectangleShape2D_n3v1e")
 
 [node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(2328, 271)
+position = Vector2(4528, 271)
 shape = SubResource("RectangleShape2D_n3v1e")
 
 [node name="Display Case" type="Node" parent="."]
 script = ExtResource("4_n3v1e")
 
 [node name="Trashcan" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(569, 649)
+position = Vector2(1081, 649)
 correct_piece = NodePath("../Art Pieces/Trashcan")
 current_piece = NodePath("../Art Pieces/Doki Statue")
 
 [node name="DAD Statue" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(774, 639)
+position = Vector2(1518, 639)
 correct_piece = NodePath("../Art Pieces/DAD  Statue")
 current_piece = NodePath("../Art Pieces/Guns")
 
 [node name="Thomas Edison" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(985, 624)
+position = Vector2(1953, 624)
 correct_piece = NodePath("../Art Pieces/Thomas Edison")
 current_piece = NodePath("../Art Pieces/Play Button")
 
 [node name="Doki Statue" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(1566, 638)
+position = Vector2(3078, 638)
 correct_piece = NodePath("../Art Pieces/Doki Statue")
 current_piece = NodePath("../Art Pieces/BL Book")
 
 [node name="Play Button" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(1739, 632)
+position = Vector2(3435, 632)
 correct_piece = NodePath("../Art Pieces/Play Button")
 current_piece = NodePath("../Art Pieces/Thomas Edison")
 
 [node name="Guns" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(1920, 638)
+position = Vector2(3776, 638)
 correct_piece = NodePath("../Art Pieces/Guns")
 current_piece = NodePath("../Art Pieces/DAD  Statue")
 
 [node name="BL Book" parent="Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("4_3y678")]
-position = Vector2(2114, 644)
+position = Vector2(4162, 644)
 correct_piece = NodePath("../Art Pieces/BL Book")
 current_piece = NodePath("../Art Pieces/Trashcan")
 
 [node name="Art Pieces" type="Node" parent="Display Case"]
 
 [node name="Doki Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(512, 528)
+position = Vector2(1024, 528)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/Doki Statue" index="0"]
 texture = ExtResource("7_kqb2b")
 
 [node name="Guns" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(712, 544)
+position = Vector2(1456, 544)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/Guns" index="0"]
 texture = ExtResource("9_jceom")
 
 [node name="Play Button" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(920, 544)
+position = Vector2(1888, 544)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/Play Button" index="0"]
 texture = ExtResource("10_vcg5c")
 
 [node name="BL Book" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(1504, 568)
+position = Vector2(3016, 568)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/BL Book" index="0"]
 texture = ExtResource("11_1rpm1")
 
 [node name="Thomas Edison" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(1680, 480)
+position = Vector2(3376, 480)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/Thomas Edison" index="0"]
 texture = ExtResource("12_ino2c")
 
 [node name="DAD  Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(1856, 560)
+position = Vector2(3712, 560)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/DAD  Statue" index="0"]
 texture = ExtResource("13_fjkll")
 
 [node name="Trashcan" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
-position = Vector2(2056, 560)
+position = Vector2(4104, 560)
 
 [node name="Sprite2D" parent="Display Case/Art Pieces/Trashcan" index="0"]
 texture = ExtResource("14_dqlxx")
@@ -216,7 +216,7 @@ tween_resource = SubResource("Resource_kqb2b")
 tween_on_load = false
 follow_damping = true
 limit_left = 0
-limit_right = 2263
+limit_right = 4464
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("main_camera", "interaction_area_1", "interaction_area_2", "interaction_area_3", "interaction_area_4", "interaction_area_5", "interaction_area_6", "interaction_area_7", "camera_1", "camera_2", "camera_3", "camera_4", "camera_5", "camera_6", "camera_7", "view_all_camera")]
@@ -239,6 +239,7 @@ camera_7 = NodePath("InteractionArea7/PhantomCamera2D")
 view_all_camera = NodePath("AllArtPiecesView")
 
 [node name="InteractionArea1" type="Area2D" parent="CameraManager"]
+position = Vector2(512, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea1"]
 position = Vector2(568, 615)
@@ -253,7 +254,7 @@ tween_resource = SubResource("Resource_oo5c1")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea2" type="Area2D" parent="CameraManager"]
-position = Vector2(208, 0)
+position = Vector2(952, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea2"]
 position = Vector2(568, 615)
@@ -268,7 +269,7 @@ tween_resource = SubResource("Resource_lwwdm")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea3" type="Area2D" parent="CameraManager"]
-position = Vector2(416, 0)
+position = Vector2(1384, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea3"]
 position = Vector2(568, 615)
@@ -283,7 +284,7 @@ tween_resource = SubResource("Resource_yyy7o")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea4" type="Area2D" parent="CameraManager"]
-position = Vector2(1000, 0)
+position = Vector2(2512, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea4"]
 position = Vector2(568, 615)
@@ -298,7 +299,7 @@ tween_resource = SubResource("Resource_a35t1")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea5" type="Area2D" parent="CameraManager"]
-position = Vector2(1176, 0)
+position = Vector2(2872, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea5"]
 position = Vector2(560, 616)
@@ -313,7 +314,7 @@ tween_resource = SubResource("Resource_w6xsi")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea6" type="Area2D" parent="CameraManager"]
-position = Vector2(1352, 0)
+position = Vector2(3208, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea6"]
 position = Vector2(568, 615)
@@ -328,7 +329,7 @@ tween_resource = SubResource("Resource_k67pf")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="InteractionArea7" type="Area2D" parent="CameraManager"]
-position = Vector2(1544, 0)
+position = Vector2(3592, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/InteractionArea7"]
 position = Vector2(568, 615)
