@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bwxivphd3d2um" path="res://Chapters1&2/Assets/Art Pieces/trashcan.jpeg" id="14_dqlxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
-size = Vector2(2521, 65)
+size = Vector2(4600, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3v1e"]
 size = Vector2(128, 864)
@@ -94,10 +94,10 @@ texture = ExtResource("1_oo5c1")
 z_index = -1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.32522
-anchor_top = -0.888952
-anchor_right = 1.37096
-anchor_bottom = 1.81122
+anchor_left = -0.586839
+anchor_top = -3.83343
+anchor_right = 1.63258
+anchor_bottom = 4.75598
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -107,7 +107,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(0, 65)
 
 [node name="Floor" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(1132.5, 670.5)
+position = Vector2(2172, 670.5)
 shape = SubResource("RectangleShape2D_ds5ad")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Boundaries"]
@@ -115,7 +115,7 @@ position = Vector2(-64, 271)
 shape = SubResource("RectangleShape2D_n3v1e")
 
 [node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(4528, 271)
+position = Vector2(4536, 271)
 shape = SubResource("RectangleShape2D_n3v1e")
 
 [node name="Display Case" type="Node" parent="."]
@@ -344,9 +344,9 @@ tween_resource = SubResource("Resource_1nhqy")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="AllArtPiecesView" type="Node2D" parent="CameraManager"]
-position = Vector2(1336, 352)
+position = Vector2(2632, 328)
 script = ExtResource("6_strwm")
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.35, 0.35)
 tween_resource = SubResource("Resource_jceom")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
