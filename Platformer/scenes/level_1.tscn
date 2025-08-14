@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://iqhkg8ruhi7m" path="res://Platformer/manager/level_settings.gd" id="2_7gny6"]
 [ext_resource type="Script" uid="uid://bnvqlpqib5xnc" path="res://Platformer/manager/level_manager.gd" id="3_2aecg"]
 [ext_resource type="Resource" uid="uid://c6nbwxokea12b" path="res://Platformer/manager/level_1_config.tres" id="4_xv8r0"]
-[ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Chapters1&2/Characters/doki.tscn" id="6_uqi6v"]
+[ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Characters/doki.tscn" id="6_uqi6v"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_nnsk1"]
 size = Vector2(1000, 100)

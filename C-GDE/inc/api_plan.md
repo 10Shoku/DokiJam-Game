@@ -1,3 +1,0 @@
-- entry / main func
-- lib init & quit
-- per class
