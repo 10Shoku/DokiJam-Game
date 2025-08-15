@@ -1,0 +1,337 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "trashcan_raccoon_bazooka",
+&"description": "",
+&"display_name": "trash_can_racoon_bazooka",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"BL_display": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/BL_display.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"BL_display_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/BL_display_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"DAD": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/DAD.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Stardream": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/Stardream.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Stardream Damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/Stardream Damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"damaged_spotlight": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/damaged_spotlight.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"doki_bust": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/doki_bust.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"doki_bust_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/doki_bust_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"doki_bust_extended": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/doki_bust_extended.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"doki_bust_parts": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/doki_bust_parts.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fence": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/fence.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fence_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/fence_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"gun_display": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/gun_display.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"gun_display_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/gun_display_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"inspect_icon": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/inspect_icon.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"knife_curtain_only": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/knife_curtain_only.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"knife_display_covered": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/knife_display_covered.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"knife_display_curtain": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/knife_display_curtain.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"knife_display_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/knife_display_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"knife_only": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/knife_only.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"plant": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/plant.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"playbutton": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/playbutton.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"playbutton_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/playbutton_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"portrait": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/portrait.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"portrait_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/portrait_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"raccoon_jetpack": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/raccoon_jetpack.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"reception_desk": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/reception_desk.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sign_plate": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/sign_plate.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"statue": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/statue.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"statue_damaged": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/statue_damaged.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"statue_damaged_guard": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/statue_damaged_guard.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"statue_no_arm": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/statue_no_arm.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trashcan": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/trashcan.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trashcan_raccoon_bazooka": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/trashcan_raccoon_bazooka.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trolley": {
+"export_overrides": {
+"image": "\"res://Assets/Art Pieces/trolley.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
