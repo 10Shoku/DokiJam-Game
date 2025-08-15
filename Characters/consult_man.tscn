@@ -1,5 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtm4strjy2yrn"]
+[gd_scene load_steps=5 format=3 uid="uid://dtm4strjy2yrn"]
 
 [ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_2cpkb"]
+[ext_resource type="Texture2D" uid="uid://dukuchw0d6pkh" path="res://Assets/Character Sprites/consult_man.png" id="2_pjyjm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my14m"]
+atlas = ExtResource("2_pjyjm")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_axypp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my14m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Consult Man" instance=ExtResource("1_2cpkb")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -48)
+sprite_frames = SubResource("SpriteFrames_axypp")

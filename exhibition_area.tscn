@@ -1,20 +1,13 @@
-[gd_scene load_steps=28 format=3 uid="uid://ygnmv8gr4d4l"]
+[gd_scene load_steps=21 format=3 uid="uid://ygnmv8gr4d4l"]
 
 [ext_resource type="Texture2D" uid="uid://cq1kew45cs37h" path="res://Assets/area1.jpg" id="1_oo5c1"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Characters/doki.tscn" id="2_dfv45"]
 [ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Scenes/display_area.tscn" id="4_3y678"]
 [ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Scripts/display_case.gd" id="4_n3v1e"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_strwm"]
-[ext_resource type="Texture2D" uid="uid://i7l64r6nl8xj" path="res://Assets/Art Pieces/doki_statue.jpg" id="7_kqb2b"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_oo5c1"]
 [ext_resource type="Script" uid="uid://cri30jqtsjuoc" path="res://Scripts/camera_manager.gd" id="8_oo5c1"]
-[ext_resource type="Texture2D" uid="uid://cnlmhv7yvysuo" path="res://Assets/Art Pieces/guns.jpeg" id="9_jceom"]
 [ext_resource type="PackedScene" uid="uid://btbjy2fggyco5" path="res://Scenes/art_piece.tscn" id="10_1nhqy"]
-[ext_resource type="Texture2D" uid="uid://bf1ya4trrsqre" path="res://Assets/Art Pieces/play_button.jpg" id="10_vcg5c"]
-[ext_resource type="Texture2D" uid="uid://cq7ijmgeg7hmi" path="res://Assets/Art Pieces/bl_book.jpeg" id="11_1rpm1"]
-[ext_resource type="Texture2D" uid="uid://dhrcd11f24721" path="res://Assets/Art Pieces/thomas_edison.jpeg" id="12_ino2c"]
-[ext_resource type="Texture2D" uid="uid://3mhp6s1wuq4y" path="res://Assets/Art Pieces/dad_statue.jpg" id="13_fjkll"]
-[ext_resource type="Texture2D" uid="uid://bwxivphd3d2um" path="res://Assets/Art Pieces/trashcan.jpeg" id="14_dqlxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ds5ad"]
 size = Vector2(4600, 65)
@@ -161,44 +154,23 @@ current_piece = NodePath("../Art Pieces/Trashcan")
 [node name="Doki Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(1024, 528)
 
-[node name="Sprite2D" parent="Display Case/Art Pieces/Doki Statue" index="0"]
-texture = ExtResource("7_kqb2b")
-
 [node name="Guns" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(1456, 544)
-
-[node name="Sprite2D" parent="Display Case/Art Pieces/Guns" index="0"]
-texture = ExtResource("9_jceom")
 
 [node name="Play Button" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(1888, 544)
 
-[node name="Sprite2D" parent="Display Case/Art Pieces/Play Button" index="0"]
-texture = ExtResource("10_vcg5c")
-
 [node name="BL Book" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(3016, 568)
-
-[node name="Sprite2D" parent="Display Case/Art Pieces/BL Book" index="0"]
-texture = ExtResource("11_1rpm1")
 
 [node name="Thomas Edison" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(3376, 480)
 
-[node name="Sprite2D" parent="Display Case/Art Pieces/Thomas Edison" index="0"]
-texture = ExtResource("12_ino2c")
-
 [node name="DAD  Statue" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(3712, 560)
 
-[node name="Sprite2D" parent="Display Case/Art Pieces/DAD  Statue" index="0"]
-texture = ExtResource("13_fjkll")
-
 [node name="Trashcan" parent="Display Case/Art Pieces" instance=ExtResource("10_1nhqy")]
 position = Vector2(4104, 560)
-
-[node name="Sprite2D" parent="Display Case/Art Pieces/Trashcan" index="0"]
-texture = ExtResource("14_dqlxx")
 
 [node name="Doki" parent="." instance=ExtResource("2_dfv45")]
 position = Vector2(728, 456)

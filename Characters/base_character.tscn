@@ -6,12 +6,13 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_yx3n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx3n8"]
-size = Vector2(144, 96)
+size = Vector2(256, 112)
 
 [node name="Base Character" type="CharacterBody2D"]
 script = ExtResource("1_t6krv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.126, 0.126)
 sprite_frames = SubResource("SpriteFrames_yx3n8")
 
 [node name="Interaction Area" type="Area2D" parent="."]

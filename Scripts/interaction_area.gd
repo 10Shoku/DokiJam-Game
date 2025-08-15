@@ -1,9 +1,10 @@
 extends Area2D
 
+@onready var phantom_camera : PhantomCamera2D = get_tree().get_first_node_in_group("camera")
+
 @export var dialogue_timeline: String = ""
 @export var focus_camera: bool = true
 @export var one_time: bool = false
-@onready var phantom_camera: PhantomCamera2D = $PhantomCamera2D
 
 var used: bool = false
 
@@ -20,4 +21,4 @@ func on_interact():
 			Dialogic.timeline_ended.connect(_on_dialogue_end, CONNECT_ONE_SHOT)
 
 func _on_dialogue_end():
-	phantom_camera.set_follow_target(get_tree().get_first_node_in_group("Player"))
+	phantom_camera.follow_target = get_tree().get_first_node_in_group("default_camera_target")

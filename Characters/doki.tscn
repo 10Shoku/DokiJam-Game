@@ -87,22 +87,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rendh"]
-size = Vector2(60, 101)
+size = Vector2(96, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xixx4"]
-size = Vector2(128, 96)
+size = Vector2(56, 160)
 
 [node name="Doki" type="CharacterBody2D" groups=["doki"]]
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
-scale = Vector2(0.0875, 0.0875)
+scale = Vector2(0.125687, 0.125687)
 sprite_frames = SubResource("SpriteFrames_bsu7h")
-animation = &"air"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_rendh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -123,4 +124,5 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="InteractionDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector"]
+position = Vector2(-108, 16)
 shape = SubResource("RectangleShape2D_xixx4")

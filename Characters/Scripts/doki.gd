@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var camera: Camera2D = $Camera2D
+@onready var interaction_detector: CollisionShape2D = $InteractionDetector/CollisionShape2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 # sprite sheet still has a few messed up pixels. fix after jam
 
@@ -11,8 +12,18 @@ extends CharacterBody2D
 var can_jump := false
 var is_interacting := false
 
+@export var auto_walk_time := 0.5
+var walk_timer := 0.0
+@export var auto_walk_speed := speed
+
+var idp : float
+
 
 func _ready() -> void:
+	walk_timer = auto_walk_time
+	
+	idp = -interaction_detector.position.x
+	
 	# exhibition area
 	for area in get_tree().get_nodes_in_group("display_area"):
 		area.is_interacting.connect(_interaction_movement_lock)
@@ -37,19 +48,29 @@ func _physics_process(delta: float) -> void:
 
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	if direction:
-		camera.look_ahead(direction)
-		velocity.x = direction * speed
-		
-		if animated_sprite.animation != "air" or is_on_floor():
-			animated_sprite.play("walk")
-		animated_sprite.flip_h = direction > 0
+	if walk_timer > 0:
+		velocity.x = auto_walk_speed
+		walk_timer -= delta
+		animated_sprite.play("walk")
+		animated_sprite.flip_h = true
+	
 	else:
-		camera.look_normal()
-		velocity.x = move_toward(velocity.x, 0, speed)
-		
-		if animated_sprite.animation != "air" or is_on_floor():
-			animated_sprite.play("idle")
+		if direction:
+			camera.look_ahead(direction)
+			velocity.x = direction * speed
+			
+			interaction_detector.position.x = idp * direction
+			
+			if animated_sprite.animation != "air" or is_on_floor():
+				animated_sprite.play("walk")
+			
+			animated_sprite.flip_h = direction > 0
+		else:
+			camera.look_normal()
+			velocity.x = move_toward(velocity.x, 0, speed)
+			
+			if animated_sprite.animation != "air" or is_on_floor():
+				animated_sprite.play("idle")
 
 	move_and_slide()
 

@@ -1,5 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv4w4mn47ipb4"]
+[gd_scene load_steps=5 format=3 uid="uid://dv4w4mn47ipb4"]
 
 [ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_emif5"]
+[ext_resource type="Texture2D" uid="uid://i3w561wqlp2p" path="res://Assets/Character Sprites/little_man.png" id="2_i1ubb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkibb"]
+atlas = ExtResource("2_i1ubb")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ol1qo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkibb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Small Man" instance=ExtResource("1_emif5")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_ol1qo")
+flip_h = true
