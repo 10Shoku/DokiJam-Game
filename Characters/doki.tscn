@@ -1,38 +1,109 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhkalyr3d7nx0"]
+[gd_scene load_steps=17 format=3 uid="uid://dhkalyr3d7nx0"]
 
-[ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Scripts/doki.gd" id="1_an45n"]
-[ext_resource type="Texture2D" uid="uid://cniks0ucox0qe" path="res://Assets/dokidoki.jpg" id="2_0ieho"]
+[ext_resource type="Script" uid="uid://ddtiw2e0ekt7v" path="res://Characters/Scripts/doki.gd" id="1_an45n"]
+[ext_resource type="Texture2D" uid="uid://vc5vqxwoct8o" path="res://Assets/Character Sprites/Doki Spritesheet.png" id="2_xixx4"]
 [ext_resource type="Script" uid="uid://f3h87emn0bxc" path="res://Scripts/camera.gd" id="3_8bcrg"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_0ieho"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pmqs3"]
-atlas = ExtResource("2_0ieho")
-region = Rect2(0, 0, 250, 418)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6l3j"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(7655, 0, 1273, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xixx4"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(17, 0, 1273, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gr70"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(1290, 0, 1273, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uc1b"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(2563, 0, 1273, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xych"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(1290, 0, 1273, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei4f0"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(8960, 0, 1280, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udm8v"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(0, 0, 1280, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwrik"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(10240, 0, 1280, 2200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlbff"]
+atlas = ExtResource("2_xixx4")
+region = Rect2(0, 0, 1280, 2200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bsu7h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pmqs3")
+"texture": SubResource("AtlasTexture_a6l3j")
 }],
 "loop": true,
-"name": &"default",
+"name": &"air",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xixx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gr70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uc1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xych")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei4f0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udm8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwrik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlbff")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rendh"]
-size = Vector2(60, 101)
+size = Vector2(96, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xixx4"]
+size = Vector2(56, 160)
 
 [node name="Doki" type="CharacterBody2D" groups=["doki"]]
 script = ExtResource("1_an45n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.448, 0.448)
+position = Vector2(0, -32)
+scale = Vector2(0.125687, 0.125687)
 sprite_frames = SubResource("SpriteFrames_bsu7h")
-frame_progress = 0.252281
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 42.5)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_rendh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -43,11 +114,15 @@ zoom = Vector2(0.822, 0.822)
 script = ExtResource("3_8bcrg")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-limit_left = 0
-limit_right = 4464
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("4_0ieho")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="InteractionDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector"]
+position = Vector2(-108, 16)
+shape = SubResource("RectangleShape2D_xixx4")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmibojc4ktfnj"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_ddnki"]
+[ext_resource type="Texture2D" uid="uid://c3nd8u63vsfon" path="res://Assets/Character Sprites/retro_doki.png" id="2_rnxei"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi8gt"]
+atlas = ExtResource("2_rnxei")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0in5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi8gt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Retro Doki" instance=ExtResource("1_ddnki")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_0in5h")

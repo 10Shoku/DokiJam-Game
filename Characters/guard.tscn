@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyfbsf2ij2xhq"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_g8p0l"]
+[ext_resource type="Texture2D" uid="uid://xp8k2tjny0s1" path="res://Assets/Character Sprites/guard.png" id="2_5rkrv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqvh2"]
+atlas = ExtResource("2_5rkrv")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yhwga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqvh2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Guard" instance=ExtResource("1_g8p0l")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_yhwga")

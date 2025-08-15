@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://tib02urtlnfs"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_a5odh"]
+[ext_resource type="Texture2D" uid="uid://dy6yoxssjl47b" path="res://Assets/Character Sprites/mint.png" id="2_hyu4r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vurif"]
+atlas = ExtResource("2_hyu4r")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_noije"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vurif")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mint" instance=ExtResource("1_a5odh")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_noije")

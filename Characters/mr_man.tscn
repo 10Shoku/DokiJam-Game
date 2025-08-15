@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://djk3maiq555u8"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_r6auv"]
+[ext_resource type="Texture2D" uid="uid://ca1f0cog8vxdg" path="res://Assets/Character Sprites/mr_man.png" id="2_1ope3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7ore"]
+atlas = ExtResource("2_1ope3")
+region = Rect2(0, 0, 4688, 4000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5bo8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7ore")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mr Man" instance=ExtResource("1_r6auv")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -56)
+sprite_frames = SubResource("SpriteFrames_r5bo8")
