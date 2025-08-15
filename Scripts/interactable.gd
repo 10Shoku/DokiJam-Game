@@ -1,3 +1,7 @@
+###################################
+### also update in art_piece.gd ###
+###################################
+
 extends Area2D
 
 @onready var phantom_camera : PhantomCamera2D = get_tree().get_first_node_in_group("camera")
@@ -17,7 +21,7 @@ func on_interact():
 		Dialogic.start(dialogue_timeline)
 
 		if focus_camera:
-			phantom_camera.set_follow_target(self)
+			phantom_camera.follow_target = get_parent()
 			Dialogic.timeline_ended.connect(_on_dialogue_end, CONNECT_ONE_SHOT)
 
 func _on_dialogue_end():

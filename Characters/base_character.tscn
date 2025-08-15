@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://xjhjytu7dgm8"]
 
 [ext_resource type="Script" uid="uid://c2xwj50ueha78" path="res://Characters/Scripts/base_character.gd" id="1_t6krv"]
-[ext_resource type="Script" uid="uid://imt52dkxygw6" path="res://Scripts/interaction_area.gd" id="2_pcj28"]
+[ext_resource type="Script" uid="uid://imt52dkxygw6" path="res://Scripts/interactable.gd" id="2_pcj28"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yx3n8"]
 
