@@ -1,0 +1,3 @@
+join doki leftmost [animation="Slide From Left"]
+\doki: I better let them be.
+leave doki [animation="Slide To Left"]

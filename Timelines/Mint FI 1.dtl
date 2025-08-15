@@ -1,0 +1,10 @@
+join doki leftmost [animation="Slide From Left"]
+\doki: Ah, long time no see Mint!
+Mint: Oh! Hello Doki, Nice to see you.
+Mint: Are you by chance here to solve another case?
+\doki: Nah, I’m just here to have fun. Today’s my day off.
+Mint: Ah I see, I hope you can enjoy exploring. and…
+Mint: Since it’s you don't have work today, why don't we go do something in your office after this. <3
+\doki: W h a t
+Mint: hehe
+leave doki [animation="Slide To Left"]

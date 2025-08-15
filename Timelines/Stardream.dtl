@@ -1,0 +1,7 @@
+join doki leftmost [animation="Slide From Left"]
+join Stardream center [animation="Slide In Up"]
+\doki: What an oddly shaped freaky robot...
+[wait time="1.5"]
+\doki: ...I don’t know why I find it so hot though..
+leave doki [animation="Slide To Left"]
+leave Stardream [animation="Slide Out Down"]
