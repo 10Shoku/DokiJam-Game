@@ -76,7 +76,7 @@ ease = 2
 [sub_resource type="Resource" id="Resource_jceom"]
 script = ExtResource("7_oo5c1")
 duration = 1.0
-transition = 10
+transition = 1
 ease = 2
 
 [node name="Exhibition Area" type="Node"]

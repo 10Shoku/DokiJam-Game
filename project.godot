@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DokiJam Game"
-run/main_scene="uid://c24g6shbppags"
+run/main_scene="uid://ygnmv8gr4d4l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

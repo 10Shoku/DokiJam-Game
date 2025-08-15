@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtm4strjy2yrn"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_2cpkb"]
+
+[node name="Consult Man" instance=ExtResource("1_2cpkb")]

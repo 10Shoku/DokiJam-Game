@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv4w4mn47ipb4"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_emif5"]
+
+[node name="Small Man" instance=ExtResource("1_emif5")]

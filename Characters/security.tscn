@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyfbsf2ij2xhq"]
+
+[ext_resource type="PackedScene" uid="uid://xjhjytu7dgm8" path="res://Characters/base_character.tscn" id="1_g8p0l"]
+
+[node name="Security" instance=ExtResource("1_g8p0l")]
