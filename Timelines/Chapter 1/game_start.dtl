@@ -1,0 +1,16 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+Woah! What a Big Museum, even the inside is huge!
+join mr_man rightmost [animation="Slide From Right"]
+mr_man: Ah my favorite Ace Detective has arrived!
+mr_man: Welcome to my New Museum!
+join doki leftmost [animation="Slide From Left"]
+\doki: I see you’re doing well Mr. Man, but why was I invited?
+mr_man: What do you mean by that?!
+mr_man: You’re the reason why I got a Grand Reopening of this Museum!
+mr_man: Without that previous case you’ve solved about the stolen art piece, I would have been broke!
+mr_man: This Museum wouldn’t be complete without you!
+\doki: Awwww, I’m fluttered by your words Mr. Man, I’m just doing my job.
+mr_man: Anyway you can look around the place, just tell me when you’re ready for the reveal of my newest art piece for this grand reopening of my museum!
+\doki: Okay! Thanks again!
+leave mr_man
+\doki: Guess it's time to look around...

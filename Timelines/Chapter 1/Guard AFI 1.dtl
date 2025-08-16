@@ -1,0 +1,3 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+\doki: I shouldn’t bother him anymore..

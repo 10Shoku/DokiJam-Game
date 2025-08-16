@@ -1,0 +1,7 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+join knife_display_covered center [animation="Slide In Up"]
+\doki: This must be the new art piece that Mr. Man was talking about.
+\doki: I wonder what it will be..
+leave doki [animation="Slide To Left"]
+leave knife_display_covered [animation="Slide Out Down"]

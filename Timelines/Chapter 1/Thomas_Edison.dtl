@@ -1,0 +1,6 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+join portrait center [animation="Slide In Up"]
+\doki: What a handsome man, I wish I could get an autograph from him.
+leave doki [animation="Slide To Left"]
+leave portrait [animation="Slide Out Down"]

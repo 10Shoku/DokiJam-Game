@@ -18,6 +18,8 @@ extends Node
 
 var doki_current_areas : Array[DisplayArea] = []
 
+var swapping_enabled := false
+
 
 func _ready() -> void:
 	for area : DisplayArea in get_tree().get_nodes_in_group("display_area"):
@@ -26,6 +28,11 @@ func _ready() -> void:
 	
 	for piece : ArtPiece in get_tree().get_nodes_in_group("art_piece"):
 		piece.piece_clicked.connect(_on_piece_clicked)
+
+# on signal, go full view
+# do this in an autoload and call from dialogue, also one to disable_swapping
+func enable_swapping() -> void:
+	swapping_enabled = true
 
 
 func _on_doki_entered(area : DisplayArea):
@@ -133,6 +140,9 @@ func swap_pieces(from: DisplayArea, to: DisplayArea):
 
 
 func _on_piece_clicked(piece: ArtPiece):
+	if swapping_enabled == false:
+		return
+	
 	var from_area = get_current_area()
 	var to_area = get_area_of_piece(piece)
 

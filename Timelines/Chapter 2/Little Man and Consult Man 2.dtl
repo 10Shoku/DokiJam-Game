@@ -1,0 +1,9 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+Characters/doki: Hello, mind if I ask for a favor?
+Characters/Consult_Man: Sure, what is it?
+Characters/doki: I would like the both of you to swap the position of some of the art pieces. This will help me climb up to the upper level.
+Characters/doki: Would you do that for me?
+Characters/Consult_Man: Woah, woah, hold your horses. I didn’t agree to this.
+Characters/Consult_Man: You better give us something good first.
+Characters/Little_man: Oh yeah, If you have any limited merch. We will definitely help you.
+[signal arg="RBM Unlocked"]

@@ -51,9 +51,11 @@ func _start_dialogue():
 		phantom_camera.follow_target = get_parent()
 		Dialogic.timeline_ended.connect(_on_dialogue_end, CONNECT_ONE_SHOT)
 
+
 func _on_dialogue_end():
 	phantom_camera.follow_target = get_tree().get_first_node_in_group("default_camera_target")
 	interacted.emit(self)
+
 
 func _give_item():
 	if item_name == "":

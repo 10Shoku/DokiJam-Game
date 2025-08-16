@@ -1,0 +1,103 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "guard",
+&"description": "",
+&"display_name": "Guard",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"DD": {
+"export_overrides": {
+"image": "\"res://Characters/DD.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Mr Man": {
+"export_overrides": {
+"image": "\"res://Characters/mr_man.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"consult_man": {
+"export_overrides": {
+"image": "\"res://Characters/consult_man.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"guard": {
+"export_overrides": {
+"image": "\"res://Characters/guard.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"guard_defeated": {
+"export_overrides": {
+"image": "\"res://Characters/guard_defeated.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"guard_hit": {
+"export_overrides": {
+"image": "\"res://Characters/guard_hit.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"little_man": {
+"export_overrides": {
+"image": "\"res://Characters/little_man.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"mint": {
+"export_overrides": {
+"image": "\"res://Characters/mint.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"retro_doki": {
+"export_overrides": {
+"image": "\"res://Characters/retro_doki.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

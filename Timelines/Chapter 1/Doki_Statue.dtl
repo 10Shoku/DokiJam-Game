@@ -1,0 +1,7 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+join Doki_Statue center [animation="Slide In Up"]
+\doki: Awwww, He even put me on display as well!
+\doki: Oh? There’s something written on it.
+“Please do not touch the button”
+\doki: Now I’m really tempted to press the button, but maybe later..

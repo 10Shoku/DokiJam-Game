@@ -6,7 +6,7 @@ extends CharacterBody2D
 # sprite sheet still has a few messed up pixels. fix after jam
 
 @export var speed := 500.0
-@export var jump_velocity := -300.0
+@export var jump_velocity := -800.0
 
 # disable jump in level 1 pre-rube-goldberg-event
 var can_jump := false

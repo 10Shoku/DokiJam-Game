@@ -24,9 +24,9 @@ func _call_glow(arg : String):
 
 func glow():
 	if is_correctly_placed:
-		self_modulate = Color.RED
+		modulate = Color.RED
 	else:
-		self_modulate = Color.GREEN
+		modulate = Color.GREEN
 
 
 ######################################

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://8xbtky5ulw8u"]
+[gd_scene load_steps=49 format=3 uid="uid://8xbtky5ulw8u"]
 
 [ext_resource type="Texture2D" uid="uid://fbn8lshfp5rg" path="res://Assets/Backgrounds/area_one_bg.png" id="1_e6mgx"]
 [ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Characters/doki.tscn" id="1_lvmgp"]
@@ -27,9 +27,13 @@
 [ext_resource type="Texture2D" uid="uid://bfocf6cs068ou" path="res://Assets/Art Pieces/portrait.png" id="15_ht255"]
 [ext_resource type="Texture2D" uid="uid://b007cdfhorg71" path="res://Assets/Art Pieces/statue.png" id="16_epn1j"]
 [ext_resource type="Texture2D" uid="uid://c8fv17wk2a8if" path="res://Assets/Art Pieces/trashcan_raccoon_bazooka.png" id="17_qdvkx"]
-[ext_resource type="Script" uid="uid://imt52dkxygw6" path="res://Scripts/interactable.gd" id="18_7j2nf"]
+[ext_resource type="Texture2D" uid="uid://dibdrvvqx1sd5" path="res://Assets/Backgrounds/catwalks/catwalk_end.png" id="20_epn1j"]
 [ext_resource type="Script" uid="uid://cueslqgmm71ry" path="res://Scripts/item_pickup.gd" id="20_iir1i"]
+[ext_resource type="Texture2D" uid="uid://khnrdy1k6hhr" path="res://Assets/Backgrounds/catwalks/catwalk.png" id="21_qdvkx"]
+[ext_resource type="Texture2D" uid="uid://cvwfk3n5p1n6h" path="res://Assets/Backgrounds/area_one_bg_only_curtain.png" id="22_qusf0"]
+[ext_resource type="Texture2D" uid="uid://dyn02tjdbwow2" path="res://Assets/Items/chain.png" id="23_ht0dk"]
 [ext_resource type="Script" uid="uid://0l3k0203q8lu" path="res://Scripts/combat_trigger.gd" id="23_ilcbp"]
+[ext_resource type="Texture2D" uid="uid://cl4li2fptups0" path="res://Assets/Art Pieces/Golden Tomato.png" id="30_68yy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txqyh"]
 size = Vector2(12736, 192)
@@ -72,6 +76,12 @@ duration = 1.0
 transition = 0
 ease = 2
 
+[sub_resource type="Resource" id="Resource_68yy4"]
+script = ExtResource("9_3ce1e")
+duration = 1.0
+transition = 0
+ease = 2
+
 [node name="Chapter 2" type="Node"]
 
 [node name="World" type="Control" parent="."]
@@ -93,6 +103,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="World/Background"]
+z_index = -2
 layout_mode = 0
 offset_top = -768.0
 offset_right = 4225.0
@@ -101,6 +112,7 @@ scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_e6mgx")
 
 [node name="TextureRect4" type="TextureRect" parent="World/Background"]
+z_index = -2
 layout_mode = 0
 offset_left = -1352.0
 offset_top = -768.0
@@ -110,6 +122,7 @@ scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_e6mgx")
 
 [node name="TextureRect5" type="TextureRect" parent="World/Background"]
+z_index = -2
 layout_mode = 0
 offset_left = 4056.0
 offset_top = -768.0
@@ -119,6 +132,7 @@ scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_e6mgx")
 
 [node name="TextureRect2" type="TextureRect" parent="World/Background"]
+z_index = -2
 layout_mode = 0
 offset_left = 1352.0
 offset_top = -768.0
@@ -128,6 +142,7 @@ scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_e6mgx")
 
 [node name="TextureRect3" type="TextureRect" parent="World/Background"]
+z_index = -2
 layout_mode = 0
 offset_left = 2704.0
 offset_top = -768.0
@@ -251,6 +266,170 @@ offset_bottom = 964.0
 texture = ExtResource("6_2840u")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Tomato" type="TextureRect" parent="World"]
+offset_left = 3904.0
+offset_top = 8.0
+offset_right = 4404.0
+offset_bottom = 508.0
+texture = ExtResource("30_68yy4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Top Area" type="Node" parent="World"]
+
+[node name="Ladder2" type="TextureRect" parent="World/Top Area"]
+offset_left = 408.0
+offset_top = -1056.0
+offset_right = 1908.0
+offset_bottom = 444.0
+texture = ExtResource("20_epn1j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ladder" type="TextureRect" parent="World/Top Area"]
+offset_left = -160.0
+offset_top = -1056.0
+offset_right = 1340.0
+offset_bottom = 444.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ladder8" type="TextureRect" parent="World/Top Area"]
+offset_left = -792.0
+offset_top = -1056.0
+offset_right = 708.0
+offset_bottom = 444.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ladder9" type="TextureRect" parent="World/Top Area"]
+offset_left = -1424.0
+offset_top = -1056.0
+offset_right = 76.0
+offset_bottom = 444.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ladder10" type="TextureRect" parent="World/Top Area"]
+offset_left = -2056.0
+offset_top = -1056.0
+offset_right = -556.0
+offset_bottom = 444.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ladder6" type="TextureRect" parent="World/Top Area"]
+offset_left = 4016.0
+offset_top = -1040.0
+offset_right = 5516.0
+offset_bottom = 460.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Ladder7" type="TextureRect" parent="World/Top Area"]
+offset_left = 4640.0
+offset_top = -1040.0
+offset_right = 6140.0
+offset_bottom = 460.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Ladder5" type="TextureRect" parent="World/Top Area"]
+offset_left = 3408.0
+offset_top = -1040.0
+offset_right = 4908.0
+offset_bottom = 460.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Ladder3" type="TextureRect" parent="World/Top Area"]
+offset_left = 2824.0
+offset_top = -1040.0
+offset_right = 4324.0
+offset_bottom = 460.0
+texture = ExtResource("21_qdvkx")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Curtain" type="TextureRect" parent="World/Top Area"]
+offset_left = 1.0
+offset_top = -768.0
+offset_right = 4226.0
+offset_bottom = 4232.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("22_qusf0")
+flip_h = true
+
+[node name="Curtain4" type="TextureRect" parent="World/Top Area"]
+offset_left = -1352.0
+offset_top = -768.0
+offset_right = 2873.0
+offset_bottom = 4232.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("22_qusf0")
+flip_h = true
+
+[node name="Curtain2" type="TextureRect" parent="World/Top Area"]
+offset_left = 2704.0
+offset_top = -768.0
+offset_right = 6929.0
+offset_bottom = 4232.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("22_qusf0")
+flip_h = true
+
+[node name="Curtain3" type="TextureRect" parent="World/Top Area"]
+offset_left = 4056.0
+offset_top = -768.0
+offset_right = 8281.0
+offset_bottom = 4232.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("22_qusf0")
+flip_h = true
+
+[node name="Ladder4" type="TextureRect" parent="World/Top Area"]
+offset_left = 2272.0
+offset_top = -1032.0
+offset_right = 3772.0
+offset_bottom = 468.0
+texture = ExtResource("20_epn1j")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[node name="Chain" type="TextureRect" parent="World/Top Area"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+z_index = -1
+offset_left = 4221.84
+offset_top = 32.0
+offset_right = 6663.84
+offset_bottom = 368.0
+rotation = 1.57079
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("23_ht0dk")
+
+[node name="Chain2" type="TextureRect" parent="World/Top Area"]
+modulate = Color(0.423651, 0.423651, 0.423651, 1)
+z_index = -1
+offset_left = 4085.84
+offset_top = 32.0
+offset_right = 6527.84
+offset_bottom = 368.0
+rotation = 1.57079
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("23_ht0dk")
 
 [node name="Display Case" type="Node" parent="World"]
 script = ExtResource("7_68yy4")
@@ -421,18 +600,6 @@ texture = ExtResource("17_qdvkx")
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Trashcan" index="1"]
 position = Vector2(-8, 66)
 
-[node name="Pickups" type="Node2D" parent="World"]
-
-[node name="SparkleGlassShards" type="Area2D" parent="World/Pickups"]
-script = ExtResource("18_7j2nf")
-type = "item"
-item_name = "Glass Shards"
-
-[node name="SparkleGuns" type="Area2D" parent="World/Pickups"]
-script = ExtResource("18_7j2nf")
-type = "item"
-item_name = "Gun"
-
 [node name="NPCs" type="Node" parent="."]
 
 [node name="Mr Man" parent="NPCs" instance=ExtResource("9_txqyh")]
@@ -494,6 +661,11 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="RGME Trigger" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RGME Trigger"]
+
+[node name="PhantomCamera2D2" type="Node2D" parent="." groups=["full_view_camera"]]
+script = ExtResource("8_enjup")
+tween_resource = SubResource("Resource_68yy4")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [editable path="World/Display Case/Art Pieces/Doki Statue"]
 [editable path="World/Display Case/Art Pieces/Guns"]

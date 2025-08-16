@@ -314,15 +314,6 @@
 "scale": 1,
 "scene": ""
 },
-"trashcan_raccoon_bazooka": {
-"export_overrides": {
-"image": "\"res://Assets/Art Pieces/trashcan_raccoon_bazooka.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
 "trolley": {
 "export_overrides": {
 "image": "\"res://Assets/Art Pieces/trolley.png\""

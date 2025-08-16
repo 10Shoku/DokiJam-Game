@@ -23,7 +23,7 @@ position = Vector2(160, 580)
 script = ExtResource("1_tursw")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-390, -439)
+position = Vector2(-390, -584)
 scale = Vector2(0.162543, 0.162543)
 sprite_frames = SubResource("SpriteFrames_yaycq")
 autoplay = "default"

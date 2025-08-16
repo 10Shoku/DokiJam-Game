@@ -1,0 +1,7 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+Guard: Hello Detective, please don’t cause a huge ruckus again.
+Guard: I know you’re an Ace Detective and all, but you always leave a massive mess that we need to clean up, every time you solve a case.
+\doki: Ah! Hehe… sorry about that, but don’t worry about it. I have the day off today.
+Guard: Good. Anyway, have fun exploring.
+leave doki [animation="Slide To Left"]

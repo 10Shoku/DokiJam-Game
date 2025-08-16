@@ -19,7 +19,7 @@
 &"portraits": {
 "Normal": {
 "export_overrides": {
-"image": "\"res://addons/dialogic/Characters/Portraits/mr_man.png\""
+"image": "\"res://Characters/mr_man.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,
@@ -28,5 +28,5 @@
 "scene": ""
 }
 },
-&"scale": 1.0
+&"scale": 2.0
 }

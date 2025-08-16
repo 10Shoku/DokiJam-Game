@@ -1,0 +1,11 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+\doki: Oh these must be Little Man and Consult Man. I wonder what they’re talking about.
+[wait time="1.0"]
+Little_man: So, how’s the merch going so far?
+Consult_Man: It’s really rough! I never thought the dragoons would buy it so quickly. Some who didn’t make it in time are requesting more, so that they can have a chance to make a purchase.
+Consult_Man: I had to contact the manufacturers to see if it’s possible to make more of the merch.
+Little_man: Oh…Come to think of it, I couldn't make it in time either to buy the merch. I would really love to have some.
+Consult_Man: What?! Not you too! I could have just given you the prototype instead.
+\doki: Ah, they’re talking about merch. Well, I wish them the best.
+leave doki [animation="Slide To Left"]
