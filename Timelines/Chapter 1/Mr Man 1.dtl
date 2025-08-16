@@ -1,0 +1,8 @@
+join doki leftmost [animation="Slide From Left"]
+join mr_man center [animation="Slide In Up"]
+mr_man: Ah, are you finally done taking a look around the place?
+- Ah, there is something I haven’t checked yet.
+	mr_man: I see, you can take your time all you want.
+- Yeah, I’m all good now. Let’s start the ceremony.
+	mr_man: Great! I will gather our guests, give me a minute.
+	[signal arg="Area 1 end"]

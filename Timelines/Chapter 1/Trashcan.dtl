@@ -1,0 +1,6 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+join trash_can_racoon_bazooka center [animation="Slide In Up"]
+\doki: Wow that raccoon is really going for it in that trash can.
+\doki: But of all things, why is there a Bazooka in there, next to it??
+leave doki [animation="Slide To Left"]
