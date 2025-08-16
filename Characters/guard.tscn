@@ -23,3 +23,6 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -24)
 sprite_frames = SubResource("SpriteFrames_yhwga")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(8, 0)

@@ -1,5 +1,7 @@
 [background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 join doki leftmost [animation="Slide From Left"]
+join Little_man right [animation="Slide From Right" mirrored="true"]
+join Consult_Man rightmost [animation="Slide From Right"]
 \doki: Oh these must be Little Man and Consult Man. I wonder what they’re talking about.
 [wait time="1.0"]
 Little_man: So, how’s the merch going so far?

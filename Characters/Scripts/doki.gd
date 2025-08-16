@@ -24,18 +24,27 @@ func _ready() -> void:
 	
 	idp = -interaction_detector.position.x
 	
-	# exhibition area
+	Dialogic.timeline_started.connect(_timeline_started)
+	Dialogic.timeline_ended.connect(_timeline_ended)
+	
 	for area in get_tree().get_nodes_in_group("display_area"):
 		area.is_interacting.connect(_interaction_movement_lock)
 
 
-# exhibition area
+func _timeline_started():
+	animated_sprite.play("idle")
+	_interaction_movement_lock(true)
+
+
+func _timeline_ended():
+	_interaction_movement_lock(false)
+
+
 func _interaction_movement_lock(interacting_state : bool):
 	is_interacting = interacting_state
 
 
 func _physics_process(delta: float) -> void:
-	# exhibition area
 	if is_interacting:
 		return
 	

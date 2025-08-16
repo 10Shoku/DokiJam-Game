@@ -18,6 +18,9 @@ var used: bool = false
 
 # Dialogue
 @export var dialogue_timeline: String = ""
+@export var dialogue_timeline_after_first_interaction: String = ""
+var first_interaction := true
+
 @export var focus_camera: bool = true
 
 # Item
@@ -45,10 +48,15 @@ func on_interact():
 func _start_dialogue():
 	if dialogue_timeline == "":
 		return
-	Dialogic.start(dialogue_timeline)
+	
+	if first_interaction:
+		Dialogic.start(dialogue_timeline)
+		first_interaction = false
+	else:
+		Dialogic.start(dialogue_timeline_after_first_interaction)
 
 	if focus_camera:
-		phantom_camera.follow_target = get_parent()
+		phantom_camera.follow_target = self
 		Dialogic.timeline_ended.connect(_on_dialogue_end, CONNECT_ONE_SHOT)
 
 

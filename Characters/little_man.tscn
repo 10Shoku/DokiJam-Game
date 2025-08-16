@@ -24,3 +24,6 @@ animations = [{
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_ol1qo")
 flip_h = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-8, 0)

@@ -52,6 +52,7 @@ func on_interact():
 		Dialogic.start(dialogue_timeline)
 
 		if focus_camera:
+			# tween to new position
 			phantom_camera.follow_target = self
 			Dialogic.timeline_ended.connect(_on_dialogue_end, CONNECT_ONE_SHOT)
 

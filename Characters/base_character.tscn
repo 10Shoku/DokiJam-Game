@@ -5,7 +5,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_yx3n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx3n8"]
-size = Vector2(256, 112)
+size = Vector2(176, 204)
 
 [node name="Base Character" type="Area2D"]
 script = ExtResource("2_pcj28")

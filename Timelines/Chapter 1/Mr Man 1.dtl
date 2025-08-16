@@ -1,6 +1,6 @@
 [background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 join doki leftmost [animation="Slide From Left"]
-join mr_man center [animation="Slide In Up"]
+join mr_man rightmost [animation="Slide From Right"]
 mr_man: Ah, are you finally done taking a look around the place?
 - Ah, there is something I haven’t checked yet.
 	mr_man: I see, you can take your time all you want.

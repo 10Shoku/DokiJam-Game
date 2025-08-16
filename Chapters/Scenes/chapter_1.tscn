@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ce7fvbu3mtpv0"]
+[gd_scene load_steps=42 format=3 uid="uid://ce7fvbu3mtpv0"]
 
 [ext_resource type="Script" uid="uid://dewm53rr14cso" path="res://Chapters/Scripts/chapter_1.gd" id="1_0o6ng"]
 [ext_resource type="Texture2D" uid="uid://fbn8lshfp5rg" path="res://Assets/Backgrounds/area_one_bg.png" id="1_5e0gg"]
@@ -29,7 +29,6 @@
 [ext_resource type="Texture2D" uid="uid://c8fv17wk2a8if" path="res://Assets/Art Pieces/trashcan_raccoon_bazooka.png" id="17_p2he3"]
 [ext_resource type="PackedScene" uid="uid://djk3maiq555u8" path="res://Characters/mr_man.tscn" id="18_p2he3"]
 [ext_resource type="PackedScene" uid="uid://cyfbsf2ij2xhq" path="res://Characters/guard.tscn" id="19_uymsw"]
-[ext_resource type="PackedScene" uid="uid://dv4w4mn47ipb4" path="res://Characters/little_man.tscn" id="20_2hdp8"]
 [ext_resource type="Texture2D" uid="uid://cl4li2fptups0" path="res://Assets/Art Pieces/Golden Tomato.png" id="27_2hdp8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqqf6"]
@@ -65,7 +64,7 @@ size = Vector2(232, 440)
 [sub_resource type="Resource" id="Resource_25qio"]
 script = ExtResource("4_jlopi")
 duration = 1.0
-transition = 0
+transition = 1
 ease = 2
 
 [node name="Chapter 1" type="Node"]
@@ -423,6 +422,7 @@ texture = ExtResource("10_8gvsy")
 
 [node name="Doki Statue" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(-8, 608)
+dialogue_timeline = "Chapter 1/Doki_Statue"
 
 [node name="Sprite" parent="Art Pieces/Doki Statue" index="0"]
 texture = ExtResource("6_5e0gg")
@@ -433,6 +433,7 @@ shape = SubResource("RectangleShape2D_5eeuf")
 
 [node name="Guns" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(512, 680)
+dialogue_timeline = "Chapter 1/Guns"
 
 [node name="Sprite" parent="Art Pieces/Guns" index="0"]
 texture = ExtResource("7_5gm7r")
@@ -443,6 +444,7 @@ shape = SubResource("RectangleShape2D_5e0gg")
 
 [node name="Play Button" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(904, 584)
+dialogue_timeline = "Chapter 1/PlayButton"
 
 [node name="Sprite" parent="Art Pieces/Play Button" index="0"]
 texture = ExtResource("8_gu5xh")
@@ -453,6 +455,7 @@ shape = SubResource("RectangleShape2D_5gm7r")
 
 [node name="Stardream" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(2296, 656)
+dialogue_timeline = "Chapter 1/Stardream"
 
 [node name="Sprite" parent="Art Pieces/Stardream" index="0"]
 offset_left = -432.0
@@ -462,6 +465,7 @@ texture = ExtResource("11_hkbud")
 [node name="CollisionShape2D" parent="Art Pieces/Stardream" index="1"]
 position = Vector2(-12, 25)
 shape = SubResource("RectangleShape2D_xl3kd")
+disabled = true
 
 [node name="Sprite2" type="TextureRect" parent="Art Pieces/Stardream"]
 anchors_preset = 8
@@ -485,6 +489,7 @@ shape = SubResource("RectangleShape2D_xl3kd")
 
 [node name="Knife" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(2024, 608)
+dialogue_timeline = "Chapter 1/CoveredArtPiece"
 
 [node name="Sprite" parent="Art Pieces/Knife" index="0"]
 offset_left = -416.0
@@ -508,6 +513,7 @@ stretch_mode = 5
 
 [node name="BL Book" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(3592, 672)
+dialogue_timeline = "Chapter 1/BL_Book"
 
 [node name="Sprite" parent="Art Pieces/BL Book" index="0"]
 texture = ExtResource("9_t1hf5")
@@ -519,6 +525,7 @@ shape = SubResource("RectangleShape2D_gu5xh")
 
 [node name="Thomas Edison" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(4040, 584)
+dialogue_timeline = "Chapter 1/Thomas_Edison"
 
 [node name="Sprite" parent="Art Pieces/Thomas Edison" index="0"]
 texture = ExtResource("10_mk70i")
@@ -529,6 +536,7 @@ shape = SubResource("RectangleShape2D_t1hf5")
 
 [node name="DAD Statue" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(4560, 552)
+dialogue_timeline = "DAD_Statue"
 
 [node name="Sprite" parent="Art Pieces/DAD Statue" index="0"]
 texture = ExtResource("9_cj240")
@@ -539,6 +547,7 @@ shape = SubResource("RectangleShape2D_mk70i")
 
 [node name="Trashcan" parent="Art Pieces" instance=ExtResource("5_5eeuf")]
 position = Vector2(5032, 616)
+dialogue_timeline = "Chapter 1/Trashcan"
 
 [node name="Sprite" parent="Art Pieces/Trashcan" index="0"]
 offset_left = -280.0
@@ -554,18 +563,32 @@ position = Vector2(-8, 66)
 
 [node name="Consult Man" parent="NPCs" instance=ExtResource("16_n3qcu")]
 position = Vector2(-368, 728)
+dialogue_timeline = "Chapter 1/Little Man and Consult Man FI (1)"
+dialogue_timeline_after_first_interaction = "Chapter 1/Little Man and Consult Man AFI (1)"
+
+[node name="AnimatedSprite2D2" parent="NPCs/Consult Man" index="1"]
+position = Vector2(-120, -96)
+
+[node name="CollisionShape2D" parent="NPCs/Consult Man" index="2"]
+position = Vector2(-68, -56)
 
 [node name="Mint" parent="NPCs" instance=ExtResource("17_bi40f")]
 position = Vector2(2976, 728)
+dialogue_timeline = "Chapter 1/Mint FI 1"
+dialogue_timeline_after_first_interaction = "Chapter 1/Mint AFI 1"
 
 [node name="Mr Man" parent="NPCs" instance=ExtResource("18_p2he3")]
-position = Vector2(2264, 728)
+position = Vector2(2408, 728)
+dialogue_timeline = "Chapter 1/Mr Man 1"
+dialogue_timeline_after_first_interaction = "Chapter 1/Mr Man 1"
 
 [node name="Guard" parent="NPCs" instance=ExtResource("19_uymsw")]
-position = Vector2(1488, 728)
+position = Vector2(1384, 728)
+dialogue_timeline = "Chapter 1/Guard FI 1"
+dialogue_timeline_after_first_interaction = "Chapter 1/Guard AFI 1"
 
-[node name="Small Man" parent="NPCs" instance=ExtResource("20_2hdp8")]
-position = Vector2(-536, 664)
+[node name="CollisionShape2D" parent="NPCs/Guard" index="1"]
+position = Vector2(8, -22)
 
 [node name="Doki" parent="." instance=ExtResource("2_ppweo")]
 position = Vector2(-1304, 696)
@@ -583,6 +606,7 @@ zoom = Vector2(0.9, 0.9)
 tween_resource = SubResource("Resource_25qio")
 limit_left = -1352
 limit_right = 5408
+limit_bottom = 832
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [editable path="Art Pieces/Doki Statue"]
@@ -594,3 +618,5 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [editable path="Art Pieces/Thomas Edison"]
 [editable path="Art Pieces/DAD Statue"]
 [editable path="Art Pieces/Trashcan"]
+[editable path="NPCs/Consult Man"]
+[editable path="NPCs/Guard"]

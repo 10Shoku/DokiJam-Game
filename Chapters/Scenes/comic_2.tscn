@@ -1,40 +1,40 @@
-[gd_scene load_steps=50 format=3 uid="uid://8xbtky5ulw8u"]
+[gd_scene load_steps=50 format=3 uid="uid://dcnrkhs4kk3rm"]
 
-[ext_resource type="Texture2D" uid="uid://fbn8lshfp5rg" path="res://Assets/Backgrounds/area_one_bg.png" id="1_e6mgx"]
-[ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Characters/doki.tscn" id="1_lvmgp"]
-[ext_resource type="Script" uid="uid://cf0d15ceuwkai" path="res://Chapters/Scripts/chapter_2.gd" id="1_qdvkx"]
-[ext_resource type="Texture2D" uid="uid://betua5mg5mau1" path="res://Assets/Art Pieces/fence.png" id="2_g7x87"]
-[ext_resource type="Texture2D" uid="uid://cnjf8l1hgr5kv" path="res://Assets/Art Pieces/plant.png" id="3_ebd6t"]
-[ext_resource type="Texture2D" uid="uid://03g62wncb0l4" path="res://Assets/Art Pieces/reception_desk.png" id="4_oq1xb"]
-[ext_resource type="Texture2D" uid="uid://rvydv4tr0foy" path="res://Assets/Art Pieces/trolley.png" id="5_p4h51"]
-[ext_resource type="Texture2D" uid="uid://nhwqsqu7hdhk" path="res://Assets/Art Pieces/Stardream.png" id="6_2840u"]
-[ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Scripts/display_case.gd" id="7_68yy4"]
-[ext_resource type="PackedScene" uid="uid://dtm4strjy2yrn" path="res://Characters/consult_man.tscn" id="7_2840u"]
-[ext_resource type="PackedScene" uid="uid://btbjy2fggyco5" path="res://Scenes/art_piece.tscn" id="7_v1fvb"]
-[ext_resource type="PackedScene" uid="uid://tib02urtlnfs" path="res://Characters/mint.tscn" id="8_3ce1e"]
-[ext_resource type="Texture2D" uid="uid://dwpe1p47bkykm" path="res://Assets/Art Pieces/doki_bust.png" id="8_7j2nf"]
-[ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Scenes/display_area.tscn" id="8_d1o26"]
-[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="8_enjup"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_3ce1e"]
-[ext_resource type="Texture2D" uid="uid://w3g2ghoddq5j" path="res://Assets/Art Pieces/gun_display.png" id="9_iir1i"]
-[ext_resource type="PackedScene" uid="uid://djk3maiq555u8" path="res://Characters/mr_man.tscn" id="9_txqyh"]
-[ext_resource type="Texture2D" uid="uid://dd5njvicr7wt6" path="res://Assets/Art Pieces/playbutton.png" id="10_ilcbp"]
-[ext_resource type="PackedScene" uid="uid://cyfbsf2ij2xhq" path="res://Characters/guard.tscn" id="10_piw7g"]
-[ext_resource type="PackedScene" uid="uid://dv4w4mn47ipb4" path="res://Characters/little_man.tscn" id="11_dos1k"]
-[ext_resource type="Texture2D" uid="uid://lsg7jitia3fs" path="res://Assets/Art Pieces/sign_plate.png" id="11_p2o7p"]
-[ext_resource type="Texture2D" uid="uid://ds5piypd8mfsm" path="res://Assets/Art Pieces/knife_curtain_only.png" id="13_d1o26"]
-[ext_resource type="Texture2D" uid="uid://cevvpm8uuoa1x" path="res://Assets/Art Pieces/BL_display.png" id="14_t0j7d"]
-[ext_resource type="Texture2D" uid="uid://bfocf6cs068ou" path="res://Assets/Art Pieces/portrait.png" id="15_ht255"]
-[ext_resource type="Texture2D" uid="uid://b007cdfhorg71" path="res://Assets/Art Pieces/statue.png" id="16_epn1j"]
-[ext_resource type="Texture2D" uid="uid://c8fv17wk2a8if" path="res://Assets/Art Pieces/trashcan_raccoon_bazooka.png" id="17_qdvkx"]
-[ext_resource type="Texture2D" uid="uid://dibdrvvqx1sd5" path="res://Assets/Backgrounds/catwalks/catwalk_end.png" id="20_epn1j"]
-[ext_resource type="Script" uid="uid://cueslqgmm71ry" path="res://Scripts/item_pickup.gd" id="20_iir1i"]
-[ext_resource type="Texture2D" uid="uid://dg2cwaryobblu" path="res://Assets/Art Pieces/knife_display_damaged.png" id="20_qdvkx"]
-[ext_resource type="Texture2D" uid="uid://khnrdy1k6hhr" path="res://Assets/Backgrounds/catwalks/catwalk.png" id="21_qdvkx"]
-[ext_resource type="Texture2D" uid="uid://cvwfk3n5p1n6h" path="res://Assets/Backgrounds/area_one_bg_only_curtain.png" id="22_qusf0"]
-[ext_resource type="Texture2D" uid="uid://dyn02tjdbwow2" path="res://Assets/Items/chain.png" id="23_ht0dk"]
-[ext_resource type="Script" uid="uid://0l3k0203q8lu" path="res://Scripts/combat_trigger.gd" id="23_ilcbp"]
-[ext_resource type="Texture2D" uid="uid://cl4li2fptups0" path="res://Assets/Art Pieces/Golden Tomato.png" id="30_68yy4"]
+[ext_resource type="Script" uid="uid://cf0d15ceuwkai" path="res://Chapters/Scripts/chapter_2.gd" id="1_k5n4y"]
+[ext_resource type="Texture2D" uid="uid://fbn8lshfp5rg" path="res://Assets/Backgrounds/area_one_bg.png" id="2_sfqc3"]
+[ext_resource type="Texture2D" uid="uid://betua5mg5mau1" path="res://Assets/Art Pieces/fence.png" id="3_s4ms1"]
+[ext_resource type="Texture2D" uid="uid://cnjf8l1hgr5kv" path="res://Assets/Art Pieces/plant.png" id="4_vbch8"]
+[ext_resource type="Texture2D" uid="uid://03g62wncb0l4" path="res://Assets/Art Pieces/reception_desk.png" id="5_bi0oo"]
+[ext_resource type="Texture2D" uid="uid://rvydv4tr0foy" path="res://Assets/Art Pieces/trolley.png" id="6_xhbh0"]
+[ext_resource type="Texture2D" uid="uid://nhwqsqu7hdhk" path="res://Assets/Art Pieces/Stardream.png" id="7_2ikjq"]
+[ext_resource type="Texture2D" uid="uid://cl4li2fptups0" path="res://Assets/Art Pieces/Golden Tomato.png" id="8_bven1"]
+[ext_resource type="Texture2D" uid="uid://dibdrvvqx1sd5" path="res://Assets/Backgrounds/catwalks/catwalk_end.png" id="9_f38nh"]
+[ext_resource type="Texture2D" uid="uid://khnrdy1k6hhr" path="res://Assets/Backgrounds/catwalks/catwalk.png" id="10_tf5wh"]
+[ext_resource type="Texture2D" uid="uid://cvwfk3n5p1n6h" path="res://Assets/Backgrounds/area_one_bg_only_curtain.png" id="11_56x86"]
+[ext_resource type="Texture2D" uid="uid://dyn02tjdbwow2" path="res://Assets/Items/chain.png" id="12_dgoj2"]
+[ext_resource type="Script" uid="uid://1tsbryjostb5" path="res://Scripts/display_case.gd" id="13_566af"]
+[ext_resource type="PackedScene" uid="uid://deb45fx53opx6" path="res://Scenes/display_area.tscn" id="14_qtw6x"]
+[ext_resource type="PackedScene" uid="uid://btbjy2fggyco5" path="res://Scenes/art_piece.tscn" id="15_xvs02"]
+[ext_resource type="Texture2D" uid="uid://dwpe1p47bkykm" path="res://Assets/Art Pieces/doki_bust.png" id="16_m70rg"]
+[ext_resource type="Texture2D" uid="uid://w3g2ghoddq5j" path="res://Assets/Art Pieces/gun_display.png" id="17_74cjo"]
+[ext_resource type="Texture2D" uid="uid://dd5njvicr7wt6" path="res://Assets/Art Pieces/playbutton.png" id="18_u7wla"]
+[ext_resource type="Texture2D" uid="uid://lsg7jitia3fs" path="res://Assets/Art Pieces/sign_plate.png" id="19_usnq2"]
+[ext_resource type="Texture2D" uid="uid://dg2cwaryobblu" path="res://Assets/Art Pieces/knife_display_damaged.png" id="20_cokqc"]
+[ext_resource type="Texture2D" uid="uid://ds5piypd8mfsm" path="res://Assets/Art Pieces/knife_curtain_only.png" id="21_eps6i"]
+[ext_resource type="Texture2D" uid="uid://cevvpm8uuoa1x" path="res://Assets/Art Pieces/BL_display.png" id="22_8qi75"]
+[ext_resource type="Texture2D" uid="uid://bfocf6cs068ou" path="res://Assets/Art Pieces/portrait.png" id="23_6qfpa"]
+[ext_resource type="Texture2D" uid="uid://b007cdfhorg71" path="res://Assets/Art Pieces/statue.png" id="24_t26gu"]
+[ext_resource type="Texture2D" uid="uid://c8fv17wk2a8if" path="res://Assets/Art Pieces/trashcan_raccoon_bazooka.png" id="25_cnlwq"]
+[ext_resource type="PackedScene" uid="uid://djk3maiq555u8" path="res://Characters/mr_man.tscn" id="26_6g807"]
+[ext_resource type="Script" uid="uid://cueslqgmm71ry" path="res://Scripts/item_pickup.gd" id="27_lopa6"]
+[ext_resource type="PackedScene" uid="uid://tib02urtlnfs" path="res://Characters/mint.tscn" id="28_xfybr"]
+[ext_resource type="PackedScene" uid="uid://cyfbsf2ij2xhq" path="res://Characters/guard.tscn" id="29_gjief"]
+[ext_resource type="Script" uid="uid://0l3k0203q8lu" path="res://Scripts/combat_trigger.gd" id="30_4hd1e"]
+[ext_resource type="PackedScene" uid="uid://dv4w4mn47ipb4" path="res://Characters/little_man.tscn" id="31_1g3pi"]
+[ext_resource type="PackedScene" uid="uid://dtm4strjy2yrn" path="res://Characters/consult_man.tscn" id="32_7eqle"]
+[ext_resource type="PackedScene" uid="uid://dhkalyr3d7nx0" path="res://Characters/doki.tscn" id="33_mvngh"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="34_g65oo"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="35_d2vyc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txqyh"]
 size = Vector2(12736, 192)
@@ -72,19 +72,19 @@ size = Vector2(144, 168)
 [sub_resource type="CircleShape2D" id="CircleShape2D_enjup"]
 
 [sub_resource type="Resource" id="Resource_dos1k"]
-script = ExtResource("9_3ce1e")
+script = ExtResource("35_d2vyc")
 duration = 1.0
 transition = 0
 ease = 2
 
 [sub_resource type="Resource" id="Resource_68yy4"]
-script = ExtResource("9_3ce1e")
+script = ExtResource("35_d2vyc")
 duration = 1.0
 transition = 0
 ease = 2
 
-[node name="Chapter 2" type="Node"]
-script = ExtResource("1_qdvkx")
+[node name="Comic 2" type="Node"]
+script = ExtResource("1_k5n4y")
 
 [node name="World" type="Control" parent="."]
 layout_mode = 3
@@ -111,7 +111,7 @@ offset_top = -768.0
 offset_right = 4225.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_e6mgx")
+texture = ExtResource("2_sfqc3")
 
 [node name="TextureRect4" type="TextureRect" parent="World/Background"]
 z_index = -2
@@ -121,7 +121,7 @@ offset_top = -768.0
 offset_right = 2873.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_e6mgx")
+texture = ExtResource("2_sfqc3")
 
 [node name="TextureRect5" type="TextureRect" parent="World/Background"]
 z_index = -2
@@ -131,7 +131,7 @@ offset_top = -768.0
 offset_right = 8281.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_e6mgx")
+texture = ExtResource("2_sfqc3")
 
 [node name="TextureRect2" type="TextureRect" parent="World/Background"]
 z_index = -2
@@ -141,7 +141,7 @@ offset_top = -768.0
 offset_right = 5577.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_e6mgx")
+texture = ExtResource("2_sfqc3")
 
 [node name="TextureRect3" type="TextureRect" parent="World/Background"]
 z_index = -2
@@ -151,7 +151,7 @@ offset_top = -768.0
 offset_right = 6929.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_e6mgx")
+texture = ExtResource("2_sfqc3")
 
 [node name="Fences" type="Control" parent="World/Background"]
 anchors_preset = 0
@@ -164,7 +164,7 @@ offset_left = 1280.0
 offset_top = 320.0
 offset_right = 2120.0
 offset_bottom = 1160.0
-texture = ExtResource("2_g7x87")
+texture = ExtResource("3_s4ms1")
 expand_mode = 1
 stretch_mode = 5
 
@@ -174,7 +174,7 @@ offset_left = 1928.0
 offset_top = 320.0
 offset_right = 2768.0
 offset_bottom = 1160.0
-texture = ExtResource("2_g7x87")
+texture = ExtResource("3_s4ms1")
 expand_mode = 1
 stretch_mode = 5
 
@@ -189,7 +189,7 @@ offset_left = -1112.0
 offset_top = 216.0
 offset_right = -272.0
 offset_bottom = 1056.0
-texture = ExtResource("3_ebd6t")
+texture = ExtResource("4_vbch8")
 expand_mode = 1
 stretch_mode = 5
 
@@ -199,7 +199,7 @@ offset_left = 928.0
 offset_top = 216.0
 offset_right = 1768.0
 offset_bottom = 1056.0
-texture = ExtResource("3_ebd6t")
+texture = ExtResource("4_vbch8")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -210,7 +210,7 @@ offset_left = 2272.0
 offset_top = 216.0
 offset_right = 3112.0
 offset_bottom = 1056.0
-texture = ExtResource("3_ebd6t")
+texture = ExtResource("4_vbch8")
 expand_mode = 1
 stretch_mode = 5
 
@@ -220,7 +220,7 @@ offset_left = 2768.0
 offset_top = 216.0
 offset_right = 3608.0
 offset_bottom = 1056.0
-texture = ExtResource("3_ebd6t")
+texture = ExtResource("4_vbch8")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -245,7 +245,7 @@ offset_left = -1312.0
 offset_top = 256.0
 offset_right = -472.0
 offset_bottom = 1096.0
-texture = ExtResource("4_oq1xb")
+texture = ExtResource("5_bi0oo")
 expand_mode = 1
 stretch_mode = 5
 
@@ -255,7 +255,7 @@ offset_left = -872.0
 offset_top = 248.0
 offset_right = -32.0
 offset_bottom = 1088.0
-texture = ExtResource("5_p4h51")
+texture = ExtResource("6_xhbh0")
 expand_mode = 1
 stretch_mode = 5
 
@@ -265,7 +265,7 @@ offset_left = 1256.0
 offset_top = -536.0
 offset_right = 2756.0
 offset_bottom = 964.0
-texture = ExtResource("6_2840u")
+texture = ExtResource("7_2ikjq")
 expand_mode = 1
 stretch_mode = 5
 
@@ -275,7 +275,7 @@ offset_left = 3904.0
 offset_top = 8.0
 offset_right = 4404.0
 offset_bottom = 508.0
-texture = ExtResource("30_68yy4")
+texture = ExtResource("8_bven1")
 expand_mode = 1
 stretch_mode = 5
 
@@ -286,7 +286,7 @@ offset_left = 408.0
 offset_top = -1056.0
 offset_right = 1908.0
 offset_bottom = 444.0
-texture = ExtResource("20_epn1j")
+texture = ExtResource("9_f38nh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -295,7 +295,7 @@ offset_left = -160.0
 offset_top = -1056.0
 offset_right = 1340.0
 offset_bottom = 444.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -304,7 +304,7 @@ offset_left = -792.0
 offset_top = -1056.0
 offset_right = 708.0
 offset_bottom = 444.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -313,7 +313,7 @@ offset_left = -1424.0
 offset_top = -1056.0
 offset_right = 76.0
 offset_bottom = 444.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -322,7 +322,7 @@ offset_left = -2056.0
 offset_top = -1056.0
 offset_right = -556.0
 offset_bottom = 444.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 
@@ -331,7 +331,7 @@ offset_left = 4016.0
 offset_top = -1040.0
 offset_right = 5516.0
 offset_bottom = 460.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -341,7 +341,7 @@ offset_left = 4640.0
 offset_top = -1040.0
 offset_right = 6140.0
 offset_bottom = 460.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -351,7 +351,7 @@ offset_left = 3408.0
 offset_top = -1040.0
 offset_right = 4908.0
 offset_bottom = 460.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -361,7 +361,7 @@ offset_left = 2824.0
 offset_top = -1040.0
 offset_right = 4324.0
 offset_bottom = 460.0
-texture = ExtResource("21_qdvkx")
+texture = ExtResource("10_tf5wh")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -372,7 +372,7 @@ offset_top = -768.0
 offset_right = 4226.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("22_qusf0")
+texture = ExtResource("11_56x86")
 flip_h = true
 
 [node name="Curtain4" type="TextureRect" parent="World/Top Area"]
@@ -381,7 +381,7 @@ offset_top = -768.0
 offset_right = 2873.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("22_qusf0")
+texture = ExtResource("11_56x86")
 flip_h = true
 
 [node name="Curtain2" type="TextureRect" parent="World/Top Area"]
@@ -390,7 +390,7 @@ offset_top = -768.0
 offset_right = 6929.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("22_qusf0")
+texture = ExtResource("11_56x86")
 flip_h = true
 
 [node name="Curtain3" type="TextureRect" parent="World/Top Area"]
@@ -399,7 +399,7 @@ offset_top = -768.0
 offset_right = 8281.0
 offset_bottom = 4232.0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("22_qusf0")
+texture = ExtResource("11_56x86")
 flip_h = true
 
 [node name="Ladder4" type="TextureRect" parent="World/Top Area"]
@@ -407,7 +407,7 @@ offset_left = 2272.0
 offset_top = -1032.0
 offset_right = 3772.0
 offset_bottom = 468.0
-texture = ExtResource("20_epn1j")
+texture = ExtResource("9_f38nh")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
@@ -421,7 +421,7 @@ offset_right = 6663.84
 offset_bottom = 368.0
 rotation = 1.57079
 scale = Vector2(0.065, 0.065)
-texture = ExtResource("23_ht0dk")
+texture = ExtResource("12_dgoj2")
 
 [node name="Chain2" type="TextureRect" parent="World/Top Area"]
 modulate = Color(0.423651, 0.423651, 0.423651, 1)
@@ -432,85 +432,85 @@ offset_right = 6527.84
 offset_bottom = 368.0
 rotation = 1.57079
 scale = Vector2(0.065, 0.065)
-texture = ExtResource("23_ht0dk")
+texture = ExtResource("12_dgoj2")
 
 [node name="Display Case" type="Node" parent="World"]
-script = ExtResource("7_68yy4")
+script = ExtResource("13_566af")
 
-[node name="Trashcan" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="Trashcan" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(-8, 672)
 correct_piece = NodePath("../Art Pieces/Trashcan")
 current_piece = NodePath("../Art Pieces/Doki Statue")
 
-[node name="DAD Statue" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="DAD Statue" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(504, 704)
 correct_piece = NodePath("../Art Pieces/DAD Statue")
 current_piece = NodePath("../Art Pieces/Guns")
 
-[node name="Thomas Edison" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="Thomas Edison" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(896, 696)
 correct_piece = NodePath("../Art Pieces/Thomas Edison")
 current_piece = NodePath("../Art Pieces/Play Button")
 
-[node name="Doki Statue" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="Doki Statue" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(3592, 664)
 correct_piece = NodePath("../Art Pieces/Doki Statue")
 current_piece = NodePath("../Art Pieces/BL Book")
 
-[node name="Play Button" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="Play Button" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(4040, 640)
 correct_piece = NodePath("../Art Pieces/Play Button")
 current_piece = NodePath("../Art Pieces/Thomas Edison")
 
-[node name="Guns" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="Guns" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(4568, 640)
 correct_piece = NodePath("../Art Pieces/Guns")
 current_piece = NodePath("../Art Pieces/DAD Statue")
 
-[node name="BL Book" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("8_d1o26")]
+[node name="BL Book" parent="World/Display Case" node_paths=PackedStringArray("correct_piece", "current_piece") instance=ExtResource("14_qtw6x")]
 position = Vector2(5024, 680)
 correct_piece = NodePath("../Art Pieces/BL Book")
 current_piece = NodePath("../Art Pieces/Trashcan")
 
 [node name="Art Pieces" type="Node" parent="World/Display Case"]
 
-[node name="Doki Statue" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Doki Statue" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(-8, 608)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Doki Statue" index="0"]
-texture = ExtResource("8_7j2nf")
+texture = ExtResource("16_m70rg")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Doki Statue" index="1"]
 position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_qusf0")
 
-[node name="Guns" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Guns" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(512, 680)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Guns" index="0"]
-texture = ExtResource("9_iir1i")
+texture = ExtResource("17_74cjo")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Guns" index="1"]
 position = Vector2(-4, -7)
 shape = SubResource("RectangleShape2D_ht0dk")
 
-[node name="Play Button" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Play Button" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(904, 584)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Play Button" index="0"]
-texture = ExtResource("10_ilcbp")
+texture = ExtResource("18_u7wla")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Play Button" index="1"]
 position = Vector2(0, 44)
 shape = SubResource("RectangleShape2D_neaou")
 
-[node name="Stardream" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Stardream" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(2296, 656)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Stardream" index="0"]
 offset_left = -432.0
 offset_right = 408.0
-texture = ExtResource("11_p2o7p")
+texture = ExtResource("19_usnq2")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Stardream" index="1"]
 position = Vector2(-12, 25)
@@ -528,7 +528,7 @@ offset_right = -112.0
 offset_bottom = 416.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("11_p2o7p")
+texture = ExtResource("19_usnq2")
 expand_mode = 1
 stretch_mode = 5
 
@@ -536,7 +536,7 @@ stretch_mode = 5
 position = Vector2(-534, 24)
 shape = SubResource("RectangleShape2D_bhp7h")
 
-[node name="Knife" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Knife" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(2024, 608)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Knife" index="0"]
@@ -544,7 +544,7 @@ offset_left = -392.0
 offset_top = -416.0
 offset_right = 448.0
 offset_bottom = 424.0
-texture = ExtResource("20_qdvkx")
+texture = ExtResource("20_cokqc")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Knife" index="1"]
 position = Vector2(4, 84)
@@ -556,42 +556,42 @@ offset_left = -416.0
 offset_top = -424.0
 offset_right = 424.0
 offset_bottom = 416.0
-texture = ExtResource("13_d1o26")
+texture = ExtResource("21_eps6i")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="BL Book" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="BL Book" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(3592, 672)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/BL Book" index="0"]
-texture = ExtResource("14_t0j7d")
+texture = ExtResource("22_8qi75")
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/BL Book" index="1"]
 position = Vector2(4, 12)
 shape = SubResource("RectangleShape2D_chkbt")
 
-[node name="Thomas Edison" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Thomas Edison" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(4040, 584)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Thomas Edison" index="0"]
-texture = ExtResource("15_ht255")
+texture = ExtResource("23_6qfpa")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Thomas Edison" index="1"]
 position = Vector2(8, 48)
 shape = SubResource("RectangleShape2D_74iqa")
 
-[node name="DAD Statue" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="DAD Statue" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(4560, 552)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/DAD Statue" index="0"]
-texture = ExtResource("16_epn1j")
+texture = ExtResource("24_t26gu")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/DAD Statue" index="1"]
 position = Vector2(-4, 20)
 shape = SubResource("RectangleShape2D_bifsm")
 
-[node name="Trashcan" parent="World/Display Case/Art Pieces" instance=ExtResource("7_v1fvb")]
+[node name="Trashcan" parent="World/Display Case/Art Pieces" instance=ExtResource("15_xvs02")]
 position = Vector2(5032, 616)
 
 [node name="Sprite" parent="World/Display Case/Art Pieces/Trashcan" index="0"]
@@ -599,62 +599,62 @@ offset_left = -280.0
 offset_top = -232.0
 offset_right = 270.0
 offset_bottom = 318.0
-texture = ExtResource("17_qdvkx")
+texture = ExtResource("25_cnlwq")
 
 [node name="CollisionShape2D" parent="World/Display Case/Art Pieces/Trashcan" index="1"]
 position = Vector2(-8, 66)
 
 [node name="NPCs" type="Node" parent="."]
 
-[node name="Mr Man" parent="NPCs" instance=ExtResource("9_txqyh")]
+[node name="Mr Man" parent="NPCs" instance=ExtResource("26_6g807")]
 position = Vector2(2264, 728)
 
 [node name="Item" type="Area2D" parent="NPCs/Mr Man"]
-script = ExtResource("20_iir1i")
+script = ExtResource("27_lopa6")
 item_name = "PC Case"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Mr Man/Item"]
 position = Vector2(0, -52)
 shape = SubResource("RectangleShape2D_2840u")
 
-[node name="Mint" parent="NPCs" instance=ExtResource("8_3ce1e")]
+[node name="Mint" parent="NPCs" instance=ExtResource("28_xfybr")]
 position = Vector2(2976, 728)
 
 [node name="Item" type="Area2D" parent="NPCs/Mint"]
 position = Vector2(1496, 0)
-script = ExtResource("20_iir1i")
+script = ExtResource("27_lopa6")
 item_name = "Nendoroid"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Mint/Item"]
 position = Vector2(-1496, -28)
 shape = SubResource("RectangleShape2D_2840u")
 
-[node name="Guard" parent="NPCs" instance=ExtResource("10_piw7g")]
+[node name="Guard" parent="NPCs" instance=ExtResource("29_gjief")]
 position = Vector2(1488, 728)
 
 [node name="CombatTrigger" type="Area2D" parent="NPCs/Guard"]
-script = ExtResource("23_ilcbp")
+script = ExtResource("30_4hd1e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Guard/CombatTrigger"]
 shape = SubResource("CircleShape2D_enjup")
 
-[node name="Little Man" parent="NPCs" instance=ExtResource("11_dos1k")]
+[node name="Little Man" parent="NPCs" instance=ExtResource("31_1g3pi")]
 position = Vector2(-536, 664)
 
-[node name="Consult Man" parent="NPCs" instance=ExtResource("7_2840u")]
+[node name="Consult Man" parent="NPCs" instance=ExtResource("32_7eqle")]
 position = Vector2(-368, 728)
 
-[node name="Doki" parent="." instance=ExtResource("1_lvmgp")]
-position = Vector2(-1288, 696)
+[node name="Doki" parent="." instance=ExtResource("33_mvngh")]
+position = Vector2(1768, 696)
 auto_walk_time = 0.0
 
 [node name="CameraTarget" type="Marker2D" parent="Doki" groups=["default_camera_target"]]
-position = Vector2(0, -270)
+position = Vector2(256, -270)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target") groups=["camera"]]
 top_level = true
-position = Vector2(-640.889, 426)
-script = ExtResource("8_enjup")
+position = Vector2(2024, 426)
+script = ExtResource("34_g65oo")
 follow_mode = 1
 follow_target = NodePath("../Doki/CameraTarget")
 zoom = Vector2(0.9, 0.9)
@@ -668,7 +668,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RGME Trigger"]
 
 [node name="PhantomCamera2D2" type="Node2D" parent="." groups=["full_view_camera"]]
-script = ExtResource("8_enjup")
+script = ExtResource("34_g65oo")
 tween_resource = SubResource("Resource_68yy4")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 

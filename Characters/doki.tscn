@@ -90,7 +90,7 @@ animations = [{
 size = Vector2(96, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xixx4"]
-size = Vector2(56, 160)
+size = Vector2(136, 160)
 
 [node name="Doki" type="CharacterBody2D" groups=["doki"]]
 script = ExtResource("1_an45n")
@@ -116,6 +116,7 @@ script = ExtResource("3_8bcrg")
 [node name="Camera2D2" type="Camera2D" parent="."]
 limit_left = -1352
 limit_right = 5408
+limit_bottom = 832
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
 process_priority = 300
@@ -126,5 +127,5 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 [node name="InteractionDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector"]
-position = Vector2(-108, 16)
+position = Vector2(-144, 16)
 shape = SubResource("RectangleShape2D_xixx4")

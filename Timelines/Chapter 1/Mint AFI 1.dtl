@@ -1,4 +1,6 @@
 [background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 join doki leftmost [animation="Slide From Left"]
+join Mint rightmost [animation="Slide From Right"]
 Mint: hehe
+leave Mint [animation="Slide To Right"]
 leave doki [animation="Slide To Left"]
