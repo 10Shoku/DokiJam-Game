@@ -31,9 +31,9 @@ func _ready() -> void:
 func _on_doki_entered(area : DisplayArea):
 	if area not in doki_current_areas:
 		doki_current_areas.append(area)
-	print("\nEntering...")
-	print("Current Area: " + str(area))
-	print("Current Piece: " + str(area.current_piece))
+	#print("\nEntering...")
+	#print("Current Area: " + str(area))
+	#print("Current Piece: " + str(area.current_piece))
 
 
 func _on_doki_exited(area : DisplayArea):

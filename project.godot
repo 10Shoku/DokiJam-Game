@@ -26,10 +26,44 @@ GlobalInventory="*res://Singletons/global_inventory.gd"
 [dialogic]
 
 directories/dch_directory={
+"BL_book": "res://addons/dialogic/Characters/Portraits/BL_book.dch",
+"Consult_Man": "res://addons/dialogic/Characters/Portraits/Consult_Man.dch",
+"Doki_Statue": "res://addons/dialogic/Characters/Portraits/Doki_Statue.dch",
+"Guard": "res://addons/dialogic/Characters/Portraits/Guard.dch",
+"Little_man": "res://addons/dialogic/Characters/Portraits/Little_man.dch",
+"Mint": "res://addons/dialogic/Characters/Portraits/Mint.dch",
+"Stardream": "res://addons/dialogic/Characters/Portraits/Stardream.dch",
+"Tomato": "res://addons/dialogic/Characters/Portraits/Tomato.dch",
+"Trash_can": "res://addons/dialogic/Characters/Portraits/Trash_can.dch",
 "doki": "res://addons/dialogic/Characters/doki.dch",
-"mr_man": "res://addons/dialogic/Characters/mr_man.dch"
+"gun_display": "res://addons/dialogic/Characters/Portraits/gun_display.dch",
+"knife_display_covered": "res://addons/dialogic/Characters/Portraits/knife_display_covered.dch",
+"mr_man": "res://addons/dialogic/Characters/mr_man.dch",
+"play_button": "res://addons/dialogic/Characters/Portraits/play_button.dch",
+"portrait": "res://addons/dialogic/Characters/Portraits/portrait.dch",
+"statue": "res://addons/dialogic/Characters/Portraits/statue.dch",
+"trash_can_racoon_bazooka": "res://addons/dialogic/Characters/Portraits/trash_can_racoon_bazooka.dch"
 }
 directories/dtl_directory={
+"BL_Book": "res://Timelines/BL_Book.dtl",
+"CoveredArtPiece": "res://Timelines/CoveredArtPiece.dtl",
+"DAD_Statue": "res://Timelines/DAD_Statue.dtl",
+"Doki_Statue": "res://Timelines/Doki_Statue.dtl",
+"Guard AFI 1": "res://Timelines/Guard AFI 1.dtl",
+"Guard FI 1": "res://Timelines/Guard FI 1.dtl",
+"Guns": "res://Timelines/Guns.dtl",
+"Little Man and Consult Man AFI (1)": "res://Timelines/Little Man and Consult Man AFI (1).dtl",
+"Little Man and Consult Man FI (1)": "res://Timelines/Little Man and Consult Man FI (1).dtl",
+"Mint AFI 1": "res://Timelines/Mint AFI 1.dtl",
+"Mint FI 1": "res://Timelines/Mint FI 1.dtl",
+"Mr Man 1": "res://Timelines/Mr Man 1.dtl",
+"PlayButton": "res://Timelines/PlayButton.dtl",
+"Stardream": "res://Timelines/Stardream.dtl",
+"Thomas_Edison": "res://Timelines/Thomas_Edison.dtl",
+"Timelines/art_piece_swap": "res://Timelines/art_piece_swap.dtl",
+"Timelines/game_start": "res://Timelines/game_start.dtl",
+"Tomato": "res://Timelines/Tomato.dtl",
+"Trashcan": "res://Timelines/Trashcan.dtl",
 "art_piece_swap": "res://addons/dialogic/Timelines/art_piece_swap.dtl",
 "game_start": "res://addons/dialogic/Timelines/game_start.dtl"
 }

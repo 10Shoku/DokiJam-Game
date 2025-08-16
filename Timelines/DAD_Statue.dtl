@@ -1,0 +1,5 @@
+join doki leftmost [animation="Slide From Left"]
+join  center [animation="Slide In Up"]
+\doki: Woah that’s a long doggy! I’m glad he’s covering that part!
+leave doki [animation="Slide To Left"]
+leave  [animation="Slide Out Down"]

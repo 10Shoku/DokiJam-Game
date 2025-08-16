@@ -1,0 +1,8 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+join doki leftmost [animation="Slide From Left"]
+join play_button center [animation="Slide In Up"]
+\doki: Hmmm...A silver play button. I wonder what’s written on it..
+“DokibirdFPSvtuberFBttvYT”
+\doki: That’s…. An interesting name…
+leave doki [animation="Slide To Left"]
+leave play_button [animation="Slide Out Down"]

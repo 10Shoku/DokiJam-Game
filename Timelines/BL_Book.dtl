@@ -1,0 +1,7 @@
+join doki leftmost [animation="Slide From Left"]
+join BL_book center [animation="Slide In Up"]
+\doki: How shameless!! Who would even want to see this kind of stuff-
+[wait time="1.0"]
+\doki: (..I wonder if Mr. Man has a copy for it…I want to read it)
+leave doki [animation="Slide To Left"]
+leave BL_book [animation="Slide Out Down"]
