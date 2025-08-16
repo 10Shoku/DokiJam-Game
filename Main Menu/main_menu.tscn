@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c24g6shbppags"]
+[gd_scene load_steps=26 format=3 uid="uid://c24g6shbppags"]
 
 [ext_resource type="Script" uid="uid://d2q2sit6wsb1t" path="res://Main Menu/main_menu.gd" id="1_8ketd"]
-[ext_resource type="Texture2D" uid="uid://d24jgllce4agl" path="res://Main Menu/Assets/GameIcon.png" id="2_8ketd"]
+[ext_resource type="Texture2D" uid="uid://bihu23g3e515b" path="res://Main Menu/Assets/main_menu_image.png" id="2_nb5b5"]
+[ext_resource type="AudioStream" uid="uid://b1btaav5e3wyn" path="res://audio/music/2021-07-23_-_Fallen_Petals_-_www.FesliyanStudios.com.mp3" id="3_8ketd"]
 
 [sub_resource type="Gradient" id="Gradient_nb5b5"]
 
@@ -9,6 +10,46 @@
 gradient = SubResource("Gradient_nb5b5")
 fill_from = Vector2(0.536697, 1)
 fill_to = Vector2(0.477064, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ft8e8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ev4s5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qm7iq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nb5b5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ekim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhmoq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bbj2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ketd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hd3la"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wr501"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1t8gn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15lat"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b6svo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_miurs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ga7i7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60tkv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgyvh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq6yn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xn1h2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npuod"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -20,6 +61,7 @@ grow_vertical = 2
 script = ExtResource("1_8ketd")
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,53 +82,90 @@ grow_vertical = 2
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="GameIcon" type="TextureRect" parent="HBoxContainer"]
+z_index = -1
+y_sort_enabled = true
 layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_nb5b5")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/GameIcon"]
+custom_minimum_size = Vector2(0, 2.19)
+layout_mode = 2
+offset_left = 166.0
+offset_top = 65.0
+offset_right = 343.0
+offset_bottom = 690.0
+scale = Vector2(2.32, 0.88)
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/GameIcon/MarginContainer"]
+y_sort_enabled = true
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Start" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="HBoxContainer/GameIcon/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ft8e8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ev4s5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qm7iq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nb5b5")
 text = "Start"
 
-[node name="Settings" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="HBoxContainer/GameIcon/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2ekim")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jhmoq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bbj2o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ketd")
 text = "Settings
 "
 
-[node name="Achievements" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Achievements" type="Button" parent="HBoxContainer/GameIcon/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hd3la")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wr501")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1t8gn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_15lat")
 text = "Achievements"
 
-[node name="Credits" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Credits" type="Button" parent="HBoxContainer/GameIcon/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b6svo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_miurs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ga7i7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_60tkv")
 text = "Credits"
 
-[node name="Quit" type="Button" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="HBoxContainer/GameIcon/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tgyvh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eq6yn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xn1h2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_npuod")
 text = "Quit"
 
-[node name="GameIcon" type="TextureRect" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("2_8ketd")
-expand_mode = 4
-stretch_mode = 5
+[node name="MainMenuOST" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8ketd")
+parameters/looping = false
 
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Achievements" to="." method="_on_achievements_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HBoxContainer/GameIcon/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/GameIcon/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/GameIcon/MarginContainer/VBoxContainer/Achievements" to="." method="_on_achievements_pressed"]
+[connection signal="pressed" from="HBoxContainer/GameIcon/MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="HBoxContainer/GameIcon/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
