@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ce7fvbu3mtpv0"]
+[gd_scene load_steps=38 format=3 uid="uid://ce7fvbu3mtpv0"]
 
 [ext_resource type="Texture2D" uid="uid://fbn8lshfp5rg" path="res://Assets/Backgrounds/area_one_bg.png" id="1_5e0gg"]
 [ext_resource type="Texture2D" uid="uid://betua5mg5mau1" path="res://Assets/Art Pieces/fence.png" id="2_bi40f"]
@@ -23,8 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://tib02urtlnfs" path="res://Characters/mint.tscn" id="17_bi40f"]
 [ext_resource type="Texture2D" uid="uid://c8fv17wk2a8if" path="res://Assets/Art Pieces/trashcan_raccoon_bazooka.png" id="17_p2he3"]
 [ext_resource type="PackedScene" uid="uid://djk3maiq555u8" path="res://Characters/mr_man.tscn" id="18_p2he3"]
+[ext_resource type="Script" uid="uid://c2xwj50ueha78" path="res://Characters/Scripts/base_character.gd" id="19_2hdp8"]
 [ext_resource type="PackedScene" uid="uid://cyfbsf2ij2xhq" path="res://Characters/guard.tscn" id="19_uymsw"]
-[ext_resource type="PackedScene" uid="uid://dv4w4mn47ipb4" path="res://Characters/small_man.tscn" id="20_2hdp8"]
+[ext_resource type="PackedScene" uid="uid://dv4w4mn47ipb4" path="res://Characters/little_man.tscn" id="20_2hdp8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqqf6"]
 size = Vector2(12736, 192)
@@ -364,42 +365,53 @@ shape = SubResource("RectangleShape2D_mk70i")
 position = Vector2(5032, 616)
 
 [node name="Sprite" parent="Art Pieces/Trashcan" index="0"]
+offset_left = -280.0
+offset_top = -232.0
+offset_right = 270.0
+offset_bottom = 318.0
 texture = ExtResource("17_p2he3")
 
 [node name="CollisionShape2D" parent="Art Pieces/Trashcan" index="1"]
-position = Vector2(0, 16)
+position = Vector2(-8, 66)
 
 [node name="NPCs" type="Node" parent="."]
 
 [node name="Consult Man" parent="NPCs" instance=ExtResource("16_n3qcu")]
 position = Vector2(-368, 728)
+script = ExtResource("19_2hdp8")
 
 [node name="Mint" parent="NPCs" instance=ExtResource("17_bi40f")]
 position = Vector2(2976, 728)
+script = ExtResource("19_2hdp8")
 
 [node name="Mr Man" parent="NPCs" instance=ExtResource("18_p2he3")]
 position = Vector2(2264, 728)
+script = ExtResource("19_2hdp8")
 
 [node name="Guard" parent="NPCs" instance=ExtResource("19_uymsw")]
 position = Vector2(1488, 728)
+script = ExtResource("19_2hdp8")
 
 [node name="Small Man" parent="NPCs" instance=ExtResource("20_2hdp8")]
 position = Vector2(-536, 664)
+script = ExtResource("19_2hdp8")
 
 [node name="Doki" parent="." instance=ExtResource("2_ppweo")]
-position = Vector2(-1280, 704)
+position = Vector2(-1304, 696)
 
 [node name="CameraTarget" type="Marker2D" parent="Doki" groups=["default_camera_target"]]
 position = Vector2(0, -270)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target") groups=["camera"]]
 top_level = true
-position = Vector2(-1280, 434)
+position = Vector2(-640.889, 426)
 script = ExtResource("3_e0o2l")
 follow_mode = 1
 follow_target = NodePath("../Doki/CameraTarget")
 zoom = Vector2(0.9, 0.9)
 tween_resource = SubResource("Resource_25qio")
+limit_left = -1352
+limit_right = 5408
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [editable path="Art Pieces/Doki Statue"]

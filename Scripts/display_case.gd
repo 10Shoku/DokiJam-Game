@@ -125,9 +125,9 @@ func swap_pieces(from: DisplayArea, to: DisplayArea):
 		to.current_piece = temp_piece
 
 		# Swap positions
-		var temp_pos: Vector2 = from.current_piece.global_position
-		from.current_piece.global_position = to.current_piece.global_position
-		to.current_piece.global_position = temp_pos
+		var temp_pos: float = from.current_piece.global_position.x
+		from.current_piece.global_position.x = to.current_piece.global_position.x
+		to.current_piece.global_position.x = temp_pos
 		
 		Dialogic.dialogic_paused
 

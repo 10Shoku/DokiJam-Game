@@ -114,6 +114,8 @@ zoom = Vector2(0.822, 0.822)
 script = ExtResource("3_8bcrg")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
+limit_left = -1352
+limit_right = 5408
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D2"]
 process_priority = 300

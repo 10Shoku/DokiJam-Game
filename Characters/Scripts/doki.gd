@@ -77,6 +77,7 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
+		GlobalInventory.list_items()
 		for area in $InteractionDetector.get_overlapping_areas():
 			if area.has_method("on_interact"):
 				area.on_interact()
