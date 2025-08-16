@@ -1,5 +1,9 @@
 extends Control
 
+func _ready():
+	var main_menu_music: AudioStreamPlayer = $MainMenuOST
+	main_menu_music.play()
+	
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Chapters/Scenes/comic_intro.tscn")
