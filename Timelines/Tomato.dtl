@@ -1,0 +1,6 @@
+join doki leftmost [animation="Slide From Left"]
+join Tomato center [animation="Slide In Up"]
+\doki: This is new…I never thought Mr. Man could even afford to have a giant tomato that’s made out of gold- 
+\doki: But why is it hanging though? That looks unsafe…
+leave doki [animation="Slide To Left"]
+leave Tomato [animation="Slide Out Down"]
