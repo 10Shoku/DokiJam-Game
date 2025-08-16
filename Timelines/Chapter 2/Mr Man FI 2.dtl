@@ -1,3 +1,4 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 Characters/doki: Hey Mr. Man, are you okay? Hope you didn’t get yourself injured during the commotion.
 Characters/mr_man: Hello Detective, I’ll be fine.. 
 Characters/mr_man: I’m just worried about my art piece again… I never thought I would get robbed for the second time-
