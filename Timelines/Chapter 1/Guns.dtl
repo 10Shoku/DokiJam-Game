@@ -1,0 +1,6 @@
+join doki leftmost [animation="Slide From Left"]
+join gun_display center [animation="Slide In Up"]
+\doki: Woah! Those are really cool guns!
+\doki: I wish I could use this, but Mr. Man will get angry at me if I do that..
+leave doki [animation="Slide To Left"]
+leave gun_display [animation="Slide Out Down"]
