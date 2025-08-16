@@ -1,3 +1,4 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 join doki leftmost [animation="Slide From Left"]
 \doki: Ah, long time no see Mint!
 Mint: Oh! Hello Doki, Nice to see you.

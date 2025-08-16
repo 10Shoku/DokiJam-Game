@@ -1,0 +1,23 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
+Characters/Guard: What the hell do you think you’re doing?!
+Characters/doki: You give me no choice…
+Characters/Guard: You better stop this now or I will have to shoot you.
+Characters/doki: Ow… that really hurt..
+( You decided to flee the fight, but Mint blocked your escape route, and smacked you so hard that you flew back to the fight. )
+Characters/Mint: You think you could just run away like that?! You’re in a life or death situation! You have to fight!
+Characters/doki: Do you really need to hit me that hard?! I almost died from that slap!
+Characters/Guard: That was really pathetic…
+Characters/doki: I know…
+Characters/Guard: Looks like your boss is here, good luck on your retirement.
+Characters/doki: OH NOOO!!!!
+Characters/Guard: AAHHHH I CAN’T SEE SHIT!! WHAT IS WRONG WITH YOU WOMAN!!
+Characters/doki: ( This might be my chance, it’s now or never! )
+Characters/Guard: This is not funny, Ace Detective! You better stop this now!
+Characters/doki: Ow… How the hell did you still manage to deflect it despite being blind!
+( Despite his state, you still decided to flee. Mint blocks your escape route and shoots you down. )
+Characters/Mint: I can’t believe you would just run away when your enemy is already in a vulnerable state. How pathetic…
+Characters/doki: M-Mint… Why the hell do you have to shoot me down?!
+Characters/doki: ( Goddamn it… my eyesight is fading… )
+( You use the gun to shoot him right in the face. HEADSHOT! )
+You get an achievement\: “Police Brutality”
+Characters/Guard: I can’t believe you shot down your fellow officer!

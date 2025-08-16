@@ -1,3 +1,4 @@
+[background scene="res://addons/dialogic/Styles/dialogue_background_shade.tscn" fade="0.3"]
 Characters/doki: Hello again Mr. Man, can I ask for something?
 Characters/mr_man: Sure, what do you need?
 Characters/doki: You wouldn't happen to have limited merch, would you?
